@@ -17,3 +17,8 @@
   /* border: 2px solid blue; */
   width: 50px;
 }
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
