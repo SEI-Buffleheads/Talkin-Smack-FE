@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Talkin' Smack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Netlify Link]()
 
-## Available Scripts
+[Link to Back-End Repo](https://github.com/SEI-Buffleheads/talkin-smack-be)
 
-In the project directory, you can run:
+[Link to Railway]()
 
-### `npm start`
+## Placeholders
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Overview
+2. Link to API/Backend Repo
+3. Meet the Team
+4. Wireframing
+5. Whimsical tools
+6. Schemas
+7. Link to PM Board
+8. Explanation of App
+9. Screenshots of App
+10. CRUD breakdown
+11. Tools, tech, and skills used
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Github Repo](https://github.com/SEI-Buffleheads/talkin-smack-fe)
 
-### `npm run build`
+**Railway:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Netlify:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Overview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Brand Statement
 
-### `npm run eject`
+A social media site so you can talk smack with your friends. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Talkin' Smack Outline
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- #### Home Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+On the Talkin' Smack landing page, there is an area at the top to make a post. Below that is the users feed, showing posts from friends. The posts can be replied to.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- #### Navigation Bar
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- #### Footer
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+- #### Profile Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- #### Login Page
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+- #### Sign Up Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Team Members
 
-### `npm run build` fails to minify
+- Lin Lin
+- Martin
+- Danny P.
+- Caprice G.
+- Chelsea
+- Malik W.
+- Ethan
+- Luis S.
+- Alexis H.
+- Akeel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Component Hierarchy
+
+![Flow Chart](./img/flowchart.png)
+
+---
+
+## Wireframes & Branding
+
+[Wireframe]()
+
+---
+
+## Team Expectations
+
+[Team Expectations](https://docs.google.com/document/d/1Xx20AwDrqMAbPI8asQM6VqsE0kDwz8gCpUQG7W3NIfI/edit?usp=sharing)
+
+## Content Management
+
+- github pages screenshot
+[GitHub Projects](https://github.com/orgs/SEI-Buffleheads/projects/3/views/1?layout=table)
+
+---
+
+## MVP GOALS
+
+- Backend
+  - Use Flask and PostgreSQL
+  - JSON API built with Django
+  - User Authentication
+- Use React to create the front-end
+  - Use at least 5 functional components
+  - Communicates with backend RESTfully
+- Give user capability for full CRUD (profile, posts)
+- Deploy to Railway and Netlify
+- CSS styling to match wireframe and branding
+  - Responsive Design
+
+## POST MVP GOALS
+
+- Smack and SmackDown buttons
+- For You Page
+
+## Project Schedule
+
+| Date      | Deliverable                                                |   Status   |
+| :-------- | :--------------------------------------------------------- | :--------: |
+| Nov 21     | Wireframes + Final Project Approval                       |  Complete  |
+| Nov 22     | Basic Front End, Back End Deployment                       | Incomplete |
+| Nov 28     |                        | Incomplete |
+| Nov 29     | Continue Back-End + Testing + Develop Front-End Components | Incomplete |
+| Nov 30     | React Front-End MVP + CSS Styling                          | Incomplete |
+| Dec 1      | Refine CSS and proceed with Post-MVP Improvements          | Incomplete |
+| Dec 2      | Present and Celebrate                                      | Incomplete |
