@@ -1,6 +1,10 @@
 import './Profile.css';
+import { useState } from 'react';
 
 function Profile() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   return (
     <>
       <div className='profile-container'>
@@ -8,7 +12,7 @@ function Profile() {
           <div className='avatar-img'>😱</div>
           <button>Edit</button>
         </div>
-        <div className='profile-info'>
+        <form className='profile-info'>
         <input
           type="text"
           // value={username}
@@ -29,7 +33,7 @@ function Profile() {
             name='confirm-password'
             id='confirm-password'
           />
-        </div>
+        </form>
         <button>Update</button>
       </div>
     </>
