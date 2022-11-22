@@ -2,6 +2,7 @@ import './Home.css';
 import { Link, Routes, Route } from "react-router-dom"
 import Smack from "../Smack/Smack.jsx"
 import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx"
+import Navbar from "../Navbar/Navbar.jsx"
 
 function Home() {
   return (
