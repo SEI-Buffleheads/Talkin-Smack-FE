@@ -1,9 +1,10 @@
 import './Sign_Up.css';
-import { useState } from 'react';
+import { useState, useNavigate } from 'react';
 
 function Sign_Up() {
 
   const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [valid, setValid] = useState('');
@@ -25,17 +26,17 @@ function Sign_Up() {
 
   return (
     <div className="form-container">
-    <div className="form">
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Username" onChange={handleChange} />
-        <input type="password" placeholder="Password" onChange={handleChange} />
-        <input type="password" placeholder="Confirm Password" onChange={handleChange} />
-        <input type="submit" value="Submit" />
-        <h1>{valid}</h1>
-      </form>
+      <div className="form">
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Username" onChange={handleChange} />
+          <input type="password" placeholder="Password" onChange={handleChange} />
+          <input type="password" placeholder="Confirm Password" onChange={handleChange} />
+          <input type="submit" value="Submit" />
+          <h1>{valid}</h1>
+        </form>
       </div>
-      </div>
+    </div>
   );
 }
 
