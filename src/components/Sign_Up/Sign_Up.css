@@ -1,4 +1,4 @@
-body {
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
 }
 
-form {
+.form {
   width: 300px;
   height: 300px;
 }

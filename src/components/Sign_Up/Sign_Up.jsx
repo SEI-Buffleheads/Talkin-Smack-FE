@@ -24,6 +24,7 @@ function Sign_Up() {
   }
 
   return (
+    <div className="form-container">
     <div className="form">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
@@ -33,7 +34,8 @@ function Sign_Up() {
         <input type="submit" value="Submit" />
         <h1>{valid}</h1>
       </form>
-    </div>
+      </div>
+      </div>
   );
 }
 
