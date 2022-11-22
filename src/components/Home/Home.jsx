@@ -1,7 +1,7 @@
 import './Home.css';
 import { Link, Routes, Route } from "react-router-dom"
 import Smack from "../Smack/Smack.jsx"
-import TalkSmack from "../TalkSmack/TalkSmack.jsx"
+import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx"
 
 function Home() {
   return (
@@ -9,9 +9,9 @@ function Home() {
       <h1>Hello Home</h1>
       <button>Talk Smack!</button>
       <Routes>
-        <Route path="/talksmack" element={<TalkSmack />} />
+        <Route path="/talksmack" element={<Talk_Smack />} />
       </Routes>
-      <TalkSmack />
+      <Talk_Smack />
       <Smack />
     </>
   );
