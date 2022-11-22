@@ -1,0 +1,26 @@
+
+  .signIn-container{
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .signIn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+    padding: 4px;
+    border: 1px solid blue;
+    width: 300px;
+    height: 25vh;
+  }
+  .signIn-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+@media (max-width: 600px){
+}
