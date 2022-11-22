@@ -9,15 +9,18 @@ function Login() {
       <div className="signIn-form">
         <h1>Sign In</h1>
           <form className="signIn">
-            <label>Username</label>
-            <input
-              type="text"
-              // value={username}
-              placeholder="Username"
-              name="username"
-              id="username"
-              // onChange={(e) => setUsername(e.target.value)}
-            />
+            <div className='signInInput username_input'>
+              <label>Username:</label>
+              <input
+                type="text"
+                // value={username}
+                placeholder="Username"
+                name="username"
+                id="username"
+                // onChange={(e) => setUsername(e.target.value)}
+                />
+            </div>
+            <div className='signInInput password-input'>
             <label>Password</label>
             <input
               // value={password}
@@ -27,8 +30,11 @@ function Login() {
               id="password"
               autoComplete="on"
               // onChange={(e) => setPassword(e.target.value)}
-            />
-            <button>Login</button>
+              />
+            </div>
+            <Link to="/home">
+              <button>Login</button>
+              </Link>
         </form>
         <Link to="/SignUp">
           <button className="create-account-btn">Create account</button>
