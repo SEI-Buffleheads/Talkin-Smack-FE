@@ -1,11 +1,11 @@
-import './TalkSmack.css';
+import './Talk_Smack.css';
 
-function TalkSmack() {
+function Talk_Smack() {
   return (
     <>
-      <h1>Hello TalkSmack</h1>
+      <h1>Hello Talk_Smack</h1>
     </>
   );
 }
 
-export default TalkSmack;
+export default Talk_Smack;
