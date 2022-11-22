@@ -1,0 +1,19 @@
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  gap: 4px;
+  padding: 0;
+}
+.user-avatar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid blue; */
+  width: 50px;
+}
