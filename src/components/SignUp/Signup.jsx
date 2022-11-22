@@ -1,11 +1,11 @@
 import './SignUp.css';
 
-function Signup() {
+function SignUp() {
   return (
     <>
-      <h1>Hello Signup</h1>
+      <h1>Hello SignUp</h1>
     </>
   );
 }
 
-export default Signup;
+export default SignUp;
