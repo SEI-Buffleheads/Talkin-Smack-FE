@@ -13,6 +13,12 @@ function Home() {
       </Routes>
       <Talk_Smack />
       <Smack />
+      <footer>
+        <div className="footer-container">
+          <div className="footer-img">🤬</div>
+          <Link to="/profile">Profile </Link>
+        </div>
+      </footer>
     </>
   );
 }
