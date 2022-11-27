@@ -6,7 +6,6 @@ function Talk_Smack({ show, close }) {
 
   return (
     <CSSTransition in={show} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
-
     <div className={`modal ${show ? 'show' : ''}`}>
       <div className="modal-content">
         <div className="modal-header">

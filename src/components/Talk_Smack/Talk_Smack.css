@@ -29,7 +29,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.modal.exit .modal-content {
+.modal.enter-done .modal-content {
   transform: translateY(0);
 }
 
