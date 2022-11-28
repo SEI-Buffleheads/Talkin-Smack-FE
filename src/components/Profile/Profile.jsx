@@ -6,8 +6,8 @@ import image from "../Home/Footer/img/back.svg"
 function Profile() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-
+  const [confirmPassword, setConfirmPassword] = useState("");     
+  
   function handleProfileSubmit(e) {
     e.preventDefault();
   }
@@ -38,8 +38,8 @@ function Profile() {
               type="password"
               value={confirmPassword}
               placeholder="Verify Password"
-              name="confirm-password"
-              id="confirm-password"
+              name="confirmPassword"
+              id="confirmPassword"
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </form>
