@@ -9,7 +9,6 @@ function Sign_Up() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
-  const [valid, setValid] = useState('');
 
   const handleChange = e => {
     if (e.target.id === 'first_name') {
@@ -30,7 +29,7 @@ function Sign_Up() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // e.target[1].value === e.target[2].value ? setValid("Password correct.") : setValid("Try your password again.")
+    // code goes here
   }
 
   return (
