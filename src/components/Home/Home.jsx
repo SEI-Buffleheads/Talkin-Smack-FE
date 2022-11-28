@@ -12,7 +12,7 @@ function Home({ comments, posts, setToggleApiCall }) {
     <>
       <h1>Hello Home</h1>
       <button onClick={() => setShowModal(true)}>Talk Smack!</button>
-      <Talk_Smack show={showModal} close={() => setShowModal(false)} />
+      <Talk_Smack setToggleApiCall={setToggleApiCall} show={showModal} close={() => setShowModal(false)} />
       <Smack />
       <Home_Footer />
     </>
