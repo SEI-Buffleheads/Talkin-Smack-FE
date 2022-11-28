@@ -4,12 +4,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .splash-div{
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
 }
-
+.splash-div > h1{
+  font-size: 45px;
+  font-style: italic;
+  text-shadow: 2px 2px rgb(104, 101, 101);
+  animation: titleSlide 1s;
+}
+.splash-div > p{
+  text-align: center;
+  animation: contentSlide 1s;
+}
+@keyframes titleSlide{
+  from{transform: translateX(-100vw)} to {transform: translateX(0)}
+}
+@keyframes contentSlide{
+  from{transform: translateX(100vw)} to {transform: translateX(0)}
+}
 @media screen and (max-width: 700px) {
 
 
