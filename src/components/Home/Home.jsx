@@ -5,7 +5,7 @@ import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx"
 import Home_Footer from "./Footer/Home_Footer.jsx"
 import { useEffect, useState } from 'react';
 
-function Home() {
+function Home({ comments, posts, setToggleApiCall }) {
   const [showModal, setShowModal] = useState(false)
 
   return (

@@ -13,7 +13,7 @@ function App() {
   const [posts, setPosts] = useState({});
   const [comments, setComments] = useState({});
   const [users, setUsers] = useState({});
-  const [toggleApicall, setToggleApiCall] = useState(false);
+  const [toggleApiCall, setToggleApiCall] = useState(false);
 
   useEffect(() => {
     const callApi = async () => {
