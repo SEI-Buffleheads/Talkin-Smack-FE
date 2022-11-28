@@ -37,6 +37,9 @@ function Login() {
         <div className="login-title"><h1>{title}</h1></div>
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
+          {/* <div className="signIn-logo"> */}
+            <h2>talkin schmack</h2>
+          {/* </div> */}
             <input
               type="text"
               value={username}

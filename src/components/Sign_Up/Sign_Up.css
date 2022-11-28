@@ -13,6 +13,7 @@
   padding: 0;
   font-family: sans-serif;
   height: 100vh;
+  width: 100vw;
 }
 
 input {
@@ -33,6 +34,7 @@ input[type="text"], input[type="password"] {
   border-radius: 12px;
   padding: 10px;
   height: 40vh;
+  width: 60vw;
 }
 
 input[type=submit]
