@@ -3,16 +3,16 @@ import { Link, Routes, Route } from "react-router-dom"
 import Smack from "../Smack/Smack.jsx"
 import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx"
 import Home_Footer from "./Footer/Home_Footer.jsx"
+import { useEffect, useState } from 'react';
 
 function Home() {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <>
       <h1>Hello Home</h1>
-      <button>Talk Smack!</button>
-      <Routes>
-        <Route path="/talksmack" element={<Talk_Smack />} />
-      </Routes>
-      <Talk_Smack />
+      <button onClick={() => setShowModal(true)}>Talk Smack!</button>
+      <Talk_Smack show={showModal} close={() => setShowModal(false)} />
       <Smack />
       <Home_Footer />
     </>
