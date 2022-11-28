@@ -13,9 +13,10 @@
   align-items: center;
   flex-direction: column;
   height: 40vh;
+  width: fit-content;
 }
 .splash-div > h1{
-  font-size: 45px;
+  font-size: 55px;
   font-style: italic;
   text-shadow: 2px 2px rgb(104, 101, 101);
   animation: titleSlide 1s;
@@ -23,6 +24,7 @@
 .splash-div > p{
   text-align: center;
   animation: contentSlide 1s;
+  width: 45vh;
 }
 @keyframes titleSlide{
   from{transform: translateX(-100vw)} to {transform: translateX(0)}
@@ -30,7 +32,12 @@
 @keyframes contentSlide{
   from{transform: translateX(100vw)} to {transform: translateX(0)}
 }
+
 @media screen and (max-width: 700px) {
-
-
+  .splash-div{
+    width: 45vh;
+  }
+  .splash-div > h1{
+    font-size: 45px;
+  }
 }
