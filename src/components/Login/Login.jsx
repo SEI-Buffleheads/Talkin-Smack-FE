@@ -38,7 +38,7 @@ function Login() {
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
           {/* <div className="signIn-logo"> */}
-            <h2>talkin schmack</h2>
+            <h2>Talkin Schmack</h2>
           {/* </div> */}
             <input
               type="text"
@@ -71,5 +71,6 @@ function Login() {
     </>
   );
 }
+
 
 export default Login;
