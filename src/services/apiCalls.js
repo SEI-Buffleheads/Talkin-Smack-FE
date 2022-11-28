@@ -9,6 +9,15 @@ export const getUsers = async () => {
   }
 };
 
+export const getComments = async () => {
+  try {
+    const response = await api.get("/Comment");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const getUser = async (id) => {
   try {
     const response = await api.get(`/Users/${id}`);
@@ -21,6 +30,24 @@ export const getUser = async (id) => {
 export const createUser = async (userData) => {
   try {
     const response = await api.post("/Users", userData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createComment = async (commentData) => {
+  try {
+    const response = await api.post("/Comment", commentData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createPost = async (postData) => {
+  try {
+    const response = await api.post("/Post", postData);
     return response.data;
   } catch (error) {
     throw error;
