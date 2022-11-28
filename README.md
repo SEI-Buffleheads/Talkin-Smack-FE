@@ -4,7 +4,7 @@
 
 [Link to Back-End Repo](https://github.com/SEI-Buffleheads/talkin-smack-be)
 
-[Link to Railway]()
+[Link to Railway](https://talking-smack-2be-production.up.railway.app/)
 
 ## Placeholders
 
@@ -62,15 +62,15 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 ## Team Members
 
 - Lin Lin
-- Martin
+- Martin G.
 - Danny P.
 - Caprice G.
-- Chelsea
+- Chelsea D.
 - Malik W.
-- Ethan
+- Ethan L.
 - Luis S.
 - Alexis H.
-- Akeel
+- Akeel K.
 
 
 ## Component Hierarchy

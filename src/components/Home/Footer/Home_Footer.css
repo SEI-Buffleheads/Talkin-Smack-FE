@@ -1,21 +1,37 @@
-footer{
-  outline: solid red;
-  position: fixed;
-  /* left: 0; */
-  bottom: 0;
-  width: 100%;
-  height: 10%;
-  background: grey;
+.footer-btn-div{
+  display: none;
 }
 
-.footer-container{
-  display: flex;
-  flex-direction: column;
-}
+@media screen and (max-width: 700px) {
+  
+  footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background: white;
+  }
+  
+  .footer-container{
+    display: flex;
+    flex-direction: column;
 
-.footer-img{
-  bottom: 0px;
-  font-size: 100px;
-  align-self: center;
-  position: absolute;
+  }
+
+  .footer-img{
+    bottom: 0px;
+    font-size: 100px;
+    align-self: center;
+    position: absolute;
+  }
+
+  .footer-btn-div{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-btn {
+    
+  }
+
 }

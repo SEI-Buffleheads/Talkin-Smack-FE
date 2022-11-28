@@ -36,6 +36,7 @@ function Sign_Up() {
     <div className="form-container">
       <div className="form">
         <h1>Sign Up</h1>
+        <div className="sign-form">
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="First Name" onChange={handleChange} id="first_name" />
           <input type="text" placeholder="Last Name" onChange={handleChange} id="last_name" />
@@ -45,7 +46,8 @@ function Sign_Up() {
           <input type="password" placeholder="Confirm Password" onChange={handleChange} id="confirm_password" />
           <input type="submit" value="Submit" />
           {/* <h1>{valid}</h1> */}
-        </form>
+          </form>
+          </div>
       </div>
     </div>
   );

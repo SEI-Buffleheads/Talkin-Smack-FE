@@ -1,12 +1,18 @@
-import "./Splash_Footer.css"
-import { Link, Routes, Route } from "react-router-dom"
+import "./Splash_Footer.css";
+import { Link, Routes, Route } from "react-router-dom";
 
 function Splash_Footer() {
   return (
     <>
       <div className="footer-container">
-        <Link to="/Sign Up">Sign Up </Link>
-        <Link to="/Log In">Log In </Link>
+        <div className="footer-buttons">
+          <Link to="/signup">
+            <button className="footer-btn">Sign Up</button>
+          </Link>
+          <Link to="/login">
+            <button className="footer-btn">Log In</button>
+          </Link>
+        </div>
       </div>
     </>
   );
