@@ -7,6 +7,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [btn, setBtn] = useState('Sign Up')
+  const [title, setTitle] = useState('Sign In')
   const [flip, setFlip] = useState({ transform: "rotateY(0deg)" });
   const [signUpPage, setSignUpPage] = useState({ "z-index": "-1" });
   const [toggle, setToggle] = useState(false);
@@ -16,13 +17,14 @@ function Login() {
       setFlip({ transform: "rotateY(0deg)" });
       setSignUpPage({ "z-index": "-1" });
       setBtn("Sign Up")
+      setTitle("Sign In")
     } else {
       setFlip({ transform: "rotateY(180deg)" });
       setSignUpPage({ "z-index": "2" });
       setBtn("Back")
+      setTitle("Sign Up")
     }
     setToggle((prevCheck) => !prevCheck);
-    console.log("clicked");
   }
 
   function handleSignInSubmit(e) {
@@ -32,9 +34,9 @@ function Login() {
   return (
     <>
       <div className="signIn-container">
+          <h1>{title}</h1>
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
-            <h1>Sign In</h1>
             <input
               type="text"
               value={username}
