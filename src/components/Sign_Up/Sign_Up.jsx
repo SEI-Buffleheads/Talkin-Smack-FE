@@ -14,11 +14,11 @@ function Sign_Up() {
   const handleChange = e => {
     if (e.target.id === 'first_name') {
       setFirstName(e.target.value)
-    } else if (e.target.id === "last_name"){
+    } else if (e.target.id === 'last_name'){
       setLastName(e.target.value)
-    } else if (e.target.id === "username") {
+    } else if (e.target.id === 'username') {
       setUsername(e.target.value)
-    } else if (e.target.id === "email") {
+    } else if (e.target.id === 'email') {
       setEmail(e.target.value)
     }
     else if (e.target.id === 'password') {
