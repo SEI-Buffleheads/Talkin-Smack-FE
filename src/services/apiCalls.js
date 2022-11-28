@@ -18,6 +18,15 @@ export const getComments = async () => {
   }
 };
 
+export const getPosts = async () => {
+  try {
+    const response = await api.get("/Post");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const getUser = async (id) => {
   try {
     const response = await api.get(`/Users/${id}`);

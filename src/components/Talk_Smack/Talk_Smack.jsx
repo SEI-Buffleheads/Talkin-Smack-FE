@@ -3,7 +3,10 @@ import { CSSTransition } from "react-transition-group";
 
 
 function Talk_Smack({ show, close }) {
+  
 
+
+   
   return (
     <CSSTransition in={show} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
     <div className={`modal ${show ? 'show' : ''}`}>
@@ -14,6 +17,7 @@ function Talk_Smack({ show, close }) {
         <div className="modal-body">This is the Smack Talk</div>
         <div className="modal-footer">
           <button onClick={close}>close</button>
+          <button onClick={close}>submit</button>
         </div>
       </div>
     </div>
