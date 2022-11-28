@@ -4,8 +4,8 @@
   }
   .signIn-container{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
@@ -13,13 +13,16 @@
   }
   .signIn-container > button{
    z-index: 5;
+   font-size: 20px;
   }
+  /* .signIn > .login-btn{
+    align-self: flex-end;
+  } */
   .signIn{
     display: flex;
     flex-direction: column;
     /* gap: 10px; */
     align-items: center;
-    /* width: 300px; */
     padding: 10px;
     height: 40vh;
     justify-content: center;
@@ -51,14 +54,18 @@
     align-items: center;
     justify-content: center;
     width: 300px;
-    /* height: 30vh; */
     color: white;
     font-weight: bolder;
-    /* background: #626262; */
     border-radius: 20px;
     transform: rotateY(180deg);
     transition: z-index 0.3s step-end;
   }
 
+  .login-title{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 10vh;
+  }
 @media (max-width: 600px){
 }

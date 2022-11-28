@@ -34,7 +34,7 @@ function Login() {
   return (
     <>
       <div className="signIn-container">
-        <h1>{title}</h1>
+        <div className="login-title"><h1>{title}</h1></div>
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
             <input
@@ -54,13 +54,14 @@ function Login() {
               autoComplete="on"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <input type="submit" className="login-btn" value="Sign In" />
+            <input
+              type="submit"
+              className="login-btn"
+              value="Sign In" />
           </form>
           <div className="signUp-form" style={signUpPage}>
             <Sign_Up />
           </div>
-          {/* <Link to="/signup" className='create-accnt-btn'> */}
-          {/* </Link> */}
         </div>
         <button onClick={toggleFlip}>{btn}</button>
       </div>
