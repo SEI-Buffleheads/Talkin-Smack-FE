@@ -38,7 +38,7 @@ function Login() {
               </Link>
         </form>
         <Link to="/signup">
-          <button className="create-account-btn">Create account</button>
+          Create account
         </Link>
       </div>
     </div>
