@@ -12,11 +12,8 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
-
-.form {
-  width: 300px;
-  height: 300px;
+  height: 100vh;
+  width: 100vw;
 }
 
 input {
@@ -33,9 +30,11 @@ input[type="text"], input[type="password"] {
   justify-content: center;
   background-color: white;
   border: 4px solid black;
-  box-shadow: 4px 4px black;
+  box-shadow: -4px 4px black;
   border-radius: 12px;
   padding: 10px;
+  height: 40vh;
+  width: 60vw;
 }
 
 input[type=submit]
