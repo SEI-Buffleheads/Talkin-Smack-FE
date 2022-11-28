@@ -1,3 +1,10 @@
+/* add padding to input fields and top
+  font weight for submit & center
+  bold on signup
+  figure out gap property
+   */
+
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -28,4 +35,35 @@ input {
 
 input[type="text"], input[type="password"] {
   width: 200px;
+}
+
+.sign-form{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+input[type=submit]
+{
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 12px;
+  margin-top: 7px;
+  font-weight: bold;
+  font-size: 20px;
+  float: right;
+}
+
+input[type=text],
+[type=password]{
+  border: 4px solid black;
+  border-radius: 12px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
 }
