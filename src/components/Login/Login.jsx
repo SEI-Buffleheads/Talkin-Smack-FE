@@ -6,7 +6,7 @@ import Sign_Up from "../Sign_Up/Sign_Up";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [btn, setBtn] = useState('Sign Up')
+  const [btn, setBtn] = useState('Register')
   const [title, setTitle] = useState('Sign In')
   const [flip, setFlip] = useState({ transform: "rotateY(0deg)" });
   const [signUpPage, setSignUpPage] = useState({ "z-index": "-1" });
@@ -16,7 +16,7 @@ function Login() {
     if (toggle === true) {
       setFlip({ transform: "rotateY(0deg)" });
       setSignUpPage({ "z-index": "-1" });
-      setBtn("Sign Up")
+      setBtn("Register")
       setTitle("Sign In")
     } else {
       setFlip({ transform: "rotateY(180deg)" });
@@ -38,7 +38,7 @@ function Login() {
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
           {/* <div className="signIn-logo"> */}
-            <h2>talkin schmack</h2>
+            <h2>Talkin Schmack</h2>
           {/* </div> */}
             <input
               type="text"
@@ -71,5 +71,6 @@ function Login() {
     </>
   );
 }
+
 
 export default Login;

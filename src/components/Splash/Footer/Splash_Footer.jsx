@@ -6,11 +6,11 @@ function Splash_Footer() {
     <>
       <div className="footer-container">
         <div className="footer-buttons">
-          <Link to="/signup">
+          {/* <Link to="/signup">
             <button className="footer-btn">Sign Up</button>
-          </Link>
+          </Link> */}
           <Link to="/login">
-            <button className="footer-btn">Log In</button>
+            <button className="footer-btn">My Account</button>
           </Link>
         </div>
       </div>
