@@ -8,10 +8,19 @@
 }
 
 .form {
-  width: 300px;
-  height: 300px;
+  /* width: 300px;
+  height: 300px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.form > form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 input {
   display: block;
   margin-bottom: 5px;

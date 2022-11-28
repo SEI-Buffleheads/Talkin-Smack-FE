@@ -6,30 +6,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 50vh;
     overflow: hidden;
+    gap: 20px;
   }
   .signIn{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
     align-items: center;
-    padding: 4px;
+    justify-content: center;
     width: 300px;
-    height: 25vh;
+    height: 30vh;
     color: white;
     font-weight: bolder;
     background: #626262;
     border-radius: 20px;
   }
+
+  .create-accnt-btn{
+    text-decoration: none;
+  }
   .signIn-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 1s;
+    justify-content: center;
   }
   .signInInput{
     display: flex;
     justify-content: space-evenly;
+  }
+  .signUp-form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30vh;
+    color: white;
+    font-weight: bolder;
+    background: #626262;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    transition: z-index 0.3s step-end;
   }
 
 @media (max-width: 600px){
