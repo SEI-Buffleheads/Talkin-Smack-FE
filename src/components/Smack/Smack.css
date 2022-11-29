@@ -1,4 +1,4 @@
-.post {
+.reply, .post {
   width: 500px;
   background-color: #fff;
   border: 2mm ridge rgba(211, 220, 50, .6);
@@ -6,11 +6,15 @@
   padding: 10px;
 }
 
-.post-footer {
+.reply-footer, .post-footer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-.post-content {
+.reply-content, .post-content {
   padding: 10px;
+}
+
+.comments {
+  translate: 50px;
 }
