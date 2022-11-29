@@ -1,5 +1,7 @@
-import './Profile.css';
-import { useState } from 'react';
+import "./Profile.css";
+import { useState } from "react";
+import { Link } from "react-router-dom"
+import image from "../Home/Footer/img/back.svg"
 
 function Profile() {
   const [username, setUsername] = useState("");
@@ -7,41 +9,41 @@ function Profile() {
   const [confirmPassword, setConfirmPassword] = useState("");     
   
   function handleProfileSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
   }
   return (
     <>
-      <div className='profile-container'>
-        <div className='user-avatar'>
-          <div className='avatar-img'>😱</div>
-          <button>Edit</button>
+      <Link to="/home"><img className="profile-back" src={image} /></Link>
+      <div className="profile-container">
+        <h1>Profile</h1>
+        <div className="profile-form">
+          <form className="profile-info" onSubmit={handleProfileSubmit}>
+            <input
+              type="text"
+              value={username}
+              placeholder="Username"
+              name="username"
+              id="username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              type="password"
+              value={password}
+              placeholder="Password"
+              name="password"
+              id="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <input
+              type="password"
+              value={confirmPassword}
+              placeholder="Verify Password"
+              name="confirmPassword"
+              id="confirmPassword"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </form>
         </div>
-        <form className='profile-info' onSubmit={handleProfileSubmit}>
-        <input
-          type="text"
-          value={username}
-          placeholder="Username"
-          name="username"
-          id="username"
-          onChange={(e) => setUsername(e.target.value)}
-          />
-        <input 
-            type="password"
-            value={password}
-            placeholder='Password'
-            name='password'
-            id='password'
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <input
-            type="password"
-            value={confirmPassword}
-            placeholder='Verify Password'
-            name='confirmPassword'
-            id='confirmPassword'
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </form>
         <button>Update</button>
       </div>
     </>

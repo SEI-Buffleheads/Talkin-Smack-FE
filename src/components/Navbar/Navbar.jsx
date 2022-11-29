@@ -1,15 +1,24 @@
 import "./Navbar.css";
 import { Link, Routes, Route } from "react-router-dom";
+import feed from "../img/feed-vector.svg";
+import profile from "../img/profile-vector.svg";
+import logout from "../img/logout.svg";
 
 function Navbar() {
   return (
     <>
       <nav>
-        <Link to="/splash"> Splash </Link>
-        <Link to="/home"> Home </Link>
-        <Link to="/login"> Login </Link>
-        <Link to="/signup"> Sign Up </Link>
-        <Link to="/profile"> Profle </Link>
+        <div className="nav-div">
+          <Link to="/profile">
+            <img className="nav-img" src={profile} />
+          </Link>
+          <Link to="/home">
+            <img className="nav-img" src={feed} />
+          </Link>
+          <Link to="/splash">
+            <img className="nav-img" src={logout} />
+          </Link>
+        </div>
       </nav>
     </>
   );
