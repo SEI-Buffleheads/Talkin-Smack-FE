@@ -6,6 +6,7 @@ nav{
   width: 10%;
   height: 100%;
   background:rgba(255,255,255,0.5);
+  z-index: 6;
 }
 
 .nav-div{
