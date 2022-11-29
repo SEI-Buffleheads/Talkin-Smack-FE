@@ -20,21 +20,23 @@ function Smack({ users, comments, posts }) {
 
 
   return (
-    <div className='feed'>{posts.map((post, index) => (
-      <div className='post-container'>
-        <div className='post'>
-          <div className='post-header'>{names[post.author]} said:</div>
-          <div className='post-content'>{post.content}</div>
-          <div className='post-footer'>
-            <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
-            <div></div>
-            <button>reply</button>
+    <div className='smack-container'>
+      <div className='feed'>{posts.map((post, index) => (
+        <div className='post-container'>
+          <div className='post'>
+            <div className='post-header'>{names[post.author]} said:</div>
+            <div className='post-content'>{post.content}</div>
+            <div className='post-footer'>
+              <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
+              <div></div>
+              <button>reply</button>
+            </div>
           </div>
+          <Smack_Comments show={showReplies} names={names} comments={comments} post={post.id} author={names[post.author]} />
         </div>
-        <Smack_Comments show={showReplies} names={names} comments={comments} post={post.id} author={names[post.author]} />
+      ))}
+  
       </div>
-    ))}
-
     </div>
   );
 }
