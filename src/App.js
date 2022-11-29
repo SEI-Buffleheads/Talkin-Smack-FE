@@ -23,6 +23,7 @@ function App() {
       setComments(res);
       const res2 = await getPosts();
       setPosts(res2);
+      await console.log(users, comments, posts)
     };
     callApi();
   }, [toggleApiCall]);

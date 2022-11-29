@@ -7,31 +7,22 @@ import { createPost } from '../../services/apiCalls';
 function Talk_Smack({ show, close, setToggleApiCall }) {
   const [post, setPost] = useState({
     title: "",
-    updated_on: "",
     content: "",
-    created_on: "",
     author: 5 //i think this should be taken from useParams later when we have authorization
   })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    if (name === "title") {
-      setPost((prev) => ({
-        ...prev,
-        [name]: [value],
-      }));
-    } else {
-      setPost((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-    }
+    setPost((prev) => ({ 
+      ...prev,
+      [name]: value
+    }))
+    console.log(post)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createPost(post)
+    // await createPost(post)
     setToggleApiCall(prev => !prev)
   }
   
