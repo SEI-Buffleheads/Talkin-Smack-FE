@@ -21,7 +21,7 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createPost(post);
+    // await createPost(post);
     setToggleApiCall((prev) => !prev);
   };
 
