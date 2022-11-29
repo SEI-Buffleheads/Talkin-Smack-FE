@@ -4,13 +4,13 @@ import { Link, Routes, Route } from "react-router-dom";
 function Splash_Footer() {
   return (
     <>
-      <div className="footer-container">
-        <div className="footer-buttons">
+      <div className="splash-footer-container">
+        <div className="splash-footer-buttons">
           {/* <Link to="/signup">
             <button className="footer-btn">Sign Up</button>
           </Link> */}
           <Link to="/login">
-            <button className="footer-btn">My Account</button>
+            <button className="splash-footer-btn">My Account</button>
           </Link>
         </div>
       </div>
