@@ -57,6 +57,11 @@
   width: 450px;
 }
 
+.modal-footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
 textarea {
   resize: none;
 }

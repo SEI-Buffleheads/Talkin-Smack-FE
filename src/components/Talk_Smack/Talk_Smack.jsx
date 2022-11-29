@@ -2,10 +2,11 @@ import "./Talk_Smack.css";
 import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
 import { createPost } from "../../services/apiCalls";
+import * as ReactDOM  from "react-dom";
 
 function Talk_Smack({ show, close, setToggleApiCall }) {
   const [post, setPost] = useState({
-    title: "",
+    title: `User said:`,
     content: "",
     author: 5, //i think this should be taken from useParams later when we have authorization
   });
@@ -24,7 +25,7 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
     setToggleApiCall((prev) => !prev);
   };
 
-  return (
+  return ReactDOM.createPortal(
     <CSSTransition in={show} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
       <div className={`modal ${show ? "show" : ""}`}>
         <form onSubmit={handleSubmit}>
@@ -41,12 +42,14 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
             />
             <div className="modal-footer">
               <button onClick={close}>close</button>
-              <button type="submit">submit</button>
+              <div></div>
+              <button className="submit" type="submit">submit</button>
             </div>
           </div>
         </form>
       </div>
-    </CSSTransition>
+    </CSSTransition>,
+    document.getElementById('root')
   );
 }
 
