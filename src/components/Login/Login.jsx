@@ -7,7 +7,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [btn, setBtn] = useState('Register')
-  const [title, setTitle] = useState('Sign In')
+  const [title, setTitle] = useState('Log In')
   const [flip, setFlip] = useState({ transform: "rotateY(0deg)" });
   const [signUpPage, setSignUpPage] = useState({ "z-index": "-1" });
   const [toggle, setToggle] = useState(false);
@@ -17,7 +17,7 @@ function Login() {
       setFlip({ transform: "rotateY(0deg)" });
       setSignUpPage({ "z-index": "-1" });
       setBtn("Register")
-      setTitle("Sign In")
+      setTitle("Log In")
     } else {
       setFlip({ transform: "rotateY(180deg)" });
       setSignUpPage({ "z-index": "2" });
