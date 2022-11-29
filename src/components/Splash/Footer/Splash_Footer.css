@@ -1,14 +1,15 @@
-.footer-container{
+.splahs-footer-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 20vh;
+  border: 1px solid red;
 }
 
-.footer-buttons{
+.splash-footer-buttons{
   display: flex;
   justify-content: space-around;
-  animation: btnPop 2s ;
+  /* animation: btnPop 2s ; */
 }
 @keyframes btnPop{
   0%, 10%, 20%, 40%{
@@ -22,8 +23,9 @@
   }
 }
 
-.footer-btn{
+.splash-footer-btn{
   cursor: pointer;
   font-size: 20px;
+  z-index: 5;
 }
 
