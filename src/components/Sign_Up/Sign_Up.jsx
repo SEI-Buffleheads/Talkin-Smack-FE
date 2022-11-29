@@ -7,6 +7,7 @@ function Sign_Up() {
   const [lastname, setLastName] = useState('')
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
+  const [avatar, setAvatar] = useState('')
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
@@ -19,8 +20,9 @@ function Sign_Up() {
       setUsername(e.target.value)
     } else if (e.target.id === 'email') {
       setEmail(e.target.value)
-    }
-    else if (e.target.id === 'password') {
+    } else if (e.target.id === 'avatar') {
+      setAvatar(e.target.value)
+    } else if (e.target.id === 'password') {
       setPassword(e.target.value)
     } else if (e.target.id === 'confirm_password') {
       setPasswordConfirm(e.target.value)
@@ -42,10 +44,10 @@ function Sign_Up() {
           <input type="text" placeholder="Last Name" onChange={handleChange} id="last_name" />
           <input type="text" placeholder="Email" onChange={handleChange} id="email" />
           <input type="text" placeholder="Username" onChange={handleChange} id="username" />
+          <input type="text" placeholder="Avatar" onChange={handleChange} id="avatar" />
           <input type="password" placeholder="Password" onChange={handleChange} id="password" />
           <input type="password" placeholder="Confirm Password" onChange={handleChange} id="confirm_password" />
           <input type="submit" value="Submit" />
-          {/* <h1>{valid}</h1> */}
           </form>
           </div>
       </div>
