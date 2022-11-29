@@ -1,0 +1,16 @@
+.post {
+  width: 500px;
+  background-color: #fff;
+  border: 2mm ridge rgba(211, 220, 50, .6);
+  box-shadow: inset;
+  padding: 10px;
+}
+
+.post-footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.post-content {
+  padding: 10px;
+}
