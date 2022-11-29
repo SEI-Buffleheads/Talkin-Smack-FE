@@ -7,9 +7,11 @@ function Home_Footer() {
     <>
       <footer>
         <div className="footer-container">
-          <img className="footer-img" src={image} alt="logo"/>
-          <div className="footer-btn-div"><Link to="/profile"><button>Profile</button></Link>
-          <Link to="/splash"><button>Sign Out</button></Link></div>
+          <Link to="/home"><img className="footer-img" src={image} alt="logo"/></Link>
+          <div className="footer-btn-div">
+            <button><Link to="/profile" className="footer-btn">Profile</Link></button>
+            <button><Link to="/" className="footer-btn">Sign Out</Link></button>
+          </div>
         </div>
       </footer>
     </>

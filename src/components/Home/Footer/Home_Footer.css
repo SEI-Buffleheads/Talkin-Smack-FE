@@ -20,21 +20,25 @@
     flex-direction: column;
 
   }
-
   .footer-img{
     bottom: 30px;
-    font-size: 100px;
-    align-self: center;
+    /* font-size: 100px; */
+    /* align-self: center; */
     position: absolute;
     width: 85px;
+    padding-left: 40vw;
     height: auto;
   }
-
   .footer-btn-div{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px
+    padding: 20px;
+  }
+  .footer-btn{
+    text-decoration: none;
+    width: 88px;
+    color: black;
   }
 
 }
