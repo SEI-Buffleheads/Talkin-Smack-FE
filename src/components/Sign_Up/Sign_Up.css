@@ -48,6 +48,7 @@ input[type=submit]
   font-weight: bold;
   font-size: 20px;
   float: right;
+  cursor: pointer;
 }
 
 input[type=text],

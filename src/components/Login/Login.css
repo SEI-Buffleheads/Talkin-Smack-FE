@@ -15,10 +15,12 @@
   .signIn-container > button{
    z-index: 5;
    font-size: 20px;
+   cursor: pointer;
   }
-  /* .signIn > .login-btn{
-    align-self: flex-end;
-  } */
+  .signIn > .login-btn{
+    cursor: pointer;
+    /* align-self: flex-end; */
+  }
   .signIn{
     display: flex;
     flex-direction: column;
