@@ -16,6 +16,7 @@
    z-index: 5;
    font-size: 20px;
    cursor: pointer;
+   margin-top: 30px;
   }
   .signIn > .login-btn{
     cursor: pointer;
@@ -68,7 +69,7 @@
   .login-title{
     width: 300px;
     height: 100px;
-    position: absolute;
+    /* position: absolute; */
     top: 10vh;
   }
 @media (max-width: 600px){
