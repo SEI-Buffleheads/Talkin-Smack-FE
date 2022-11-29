@@ -2,6 +2,7 @@ import "./Login.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Sign_Up from "../Sign_Up/Sign_Up";
+import logoimg from '../Home/Footer/img/logo.png'
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -37,7 +38,8 @@ function Login() {
         <div className="login-title"><h1>{title}</h1></div>
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
-          {/* <div className="signIn-logo"> */}
+            {/* <div className="signIn-logo"> */}
+            <img className="login-logo" src={logoimg} />
             <h2>Talkin Schmack</h2>
           {/* </div> */}
             <input
