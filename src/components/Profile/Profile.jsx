@@ -2,6 +2,7 @@ import "./Profile.css";
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import image from "../Home/Footer/img/back.svg"
+import Home_Footer from "../Home/Footer/Home_Footer";
 
 function Profile() {
   const [username, setUsername] = useState("");
@@ -46,6 +47,7 @@ function Profile() {
         </div>
         <button>Update</button>
       </div>
+      <Home_Footer />
     </>
   );
 }
