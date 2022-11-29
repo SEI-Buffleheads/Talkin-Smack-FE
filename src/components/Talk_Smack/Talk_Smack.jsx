@@ -6,7 +6,7 @@ import * as ReactDOM  from "react-dom";
 
 function Talk_Smack({ show, close, setToggleApiCall }) {
   const [post, setPost] = useState({
-    title: `User said:`,
+    title: "User said: ",
     content: "",
     author: 5, //i think this should be taken from useParams later when we have authorization
   });

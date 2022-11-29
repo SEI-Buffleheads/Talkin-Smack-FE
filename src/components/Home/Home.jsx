@@ -7,13 +7,18 @@ import { useEffect, useState } from 'react';
 
 function Home({ comments, posts, setToggleApiCall }) {
   const [showModal, setShowModal] = useState(false)
-
+  
+  useEffect(() => {
+    return
+    setToggleApiCall((prev) => !prev)
+  }, [])
+  console.log(comments)
   return (
     <>
       <h1>Hello Home</h1>
       <button onClick={() => setShowModal(true)}>Talk Smack!</button>
       <Talk_Smack setToggleApiCall={setToggleApiCall} show={showModal} close={() => setShowModal(false)} />
-      <Smack />
+      {/* <Smack comments={comments} posts={posts} /> */}
       <Home_Footer />
     </>
   );

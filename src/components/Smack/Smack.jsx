@@ -1,10 +1,23 @@
 import './Smack.css';
 
-function Smack() {
+function Smack({ comments, posts }) {
+  
+  console.log(comments)
+
+
   return (
-    <>
-      <h1>Hello Smack</h1>
-    </>
+    <div className='feed'>{comments.map((comment) => (
+      <div className='post'>
+        {comment}
+        <div className='footer'>
+          <div></div>
+          <div></div>
+          <button>reply</button>
+        </div>
+      </div>
+    ))}
+
+    </div>
   );
 }
 
