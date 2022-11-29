@@ -30,15 +30,9 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
         <form onSubmit={handleSubmit}>
           <div className="modal-content">
             <div className="modal-header">
-              <input
-                className="modal-title"
-                placeholder="Enter Title"
-                name="title"
-                value={post.title}
-                onChange={handleChange}
-              />
+              <h4 className="modal-title">Talk Smack</h4>
             </div>
-            <input
+            <textarea
               className="modal-body"
               placeholder="Talk Smack"
               name="content"
