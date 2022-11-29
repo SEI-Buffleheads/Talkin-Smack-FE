@@ -5,6 +5,7 @@
   align-items: center;
   height: 50vh;
   gap: 4px;
+  margin-top: 50px;
 }
 
 .profile-form{
@@ -25,8 +26,15 @@
 
 .profile-back{
   height: 20px;
-  padding-left: 100px;
+  padding-left: 150px;
   padding-top: 55px;
-  position: absolute;
 }
 
+@media screen and (max-width: 700px) {
+  .profile-back{
+    all: unset;
+    position: absolute;
+    height: 20px;
+    padding: 20px;
+  }
+}
