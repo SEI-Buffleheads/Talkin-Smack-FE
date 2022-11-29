@@ -20,13 +20,13 @@ function Smack({ users, comments, posts }) {
 
 
   return (
-    <div className='feed'>{posts.map((post) => (
+    <div className='feed'>{posts.map((post, index) => (
       <div className='post-container'>
         <div className='post'>
           <div className='post-header'>{names[post.author]} said:</div>
           <div className='post-content'>{post.content}</div>
           <div className='post-footer'>
-            <Reply_Button comments={comments} post={post.id} setShow={setShowReplies} />
+            <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
             <div></div>
             <button>reply</button>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Reply_Button({ comments, post }) {
+export default function Reply_Button({ comments, post, setShow }) {
 
   let replies = [];
   for (let comment in comments) {
@@ -8,13 +8,18 @@ export default function Reply_Button({ comments, post }) {
       replies.push(comments[comment]);
     }
   }
+
+  const handleClick = (e) => {
+    console.log(e)
+    setShow((prev)=>!prev)
+  }
   
   if (replies.length == 0) return <div></div>
   if (replies.length == 1) return (
-    <button>show reply</button>
+    <button value={post} onClick={handleClick}>show reply</button>
   )
   
   return (
-    <button>show replies</button>
+    <button onClick={handleClick}>show replies</button>
   )
 }

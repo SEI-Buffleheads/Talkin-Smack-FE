@@ -13,8 +13,6 @@ export default function Smack_Comments({ names, comments, post, author, show }) 
        replies.push(comments[comment])
     } 
   }
- 
-  console.log(comments)
   
   return (
     <div className="comments">
