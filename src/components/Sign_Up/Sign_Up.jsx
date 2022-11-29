@@ -44,7 +44,7 @@ function Sign_Up() {
           <input type="text" placeholder="Last Name" onChange={handleChange} id="last_name" />
           <input type="text" placeholder="Email" onChange={handleChange} id="email" />
           <input type="text" placeholder="Username" onChange={handleChange} id="username" />
-          <input type="text" placeholder="Avatar" onChange={handleChange} id="avatar" />
+          {/* <input type="text" placeholder="Avatar" onChange={handleChange} id="avatar" /> */}
           <input type="password" placeholder="Password" onChange={handleChange} id="password" />
           <input type="password" placeholder="Confirm Password" onChange={handleChange} id="confirm_password" />
           <input type="submit" value="Submit" />
