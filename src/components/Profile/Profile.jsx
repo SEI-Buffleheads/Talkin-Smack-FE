@@ -13,7 +13,7 @@ function Profile() {
   }
   return (
     <>
-      <Link to="/home"><img className="profile-back" src={image} /></Link>
+      {/* <Link to="/home"><img className="profile-back" src={image} /></Link> */}
       <div className="profile-container">
         <h1>Profile</h1>
         <div className="profile-form">
@@ -45,6 +45,7 @@ function Profile() {
           </form>
         </div>
         <button>Update</button>
+        <Link to="/home"><img className="profile-back" src={image} /></Link>
       </div>
     </>
   );
