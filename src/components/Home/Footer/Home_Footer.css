@@ -1,6 +1,8 @@
-.footer-btn-div{
+.footer-container
+{
   display: none;
 }
+
 
 @media screen and (max-width: 700px) {
   
@@ -8,8 +10,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 10%;
-    background: white;
+    height: 70px;
+    background:rgba(255,255,255,0.5)
   }
   
   .footer-container{
@@ -19,19 +21,19 @@
   }
 
   .footer-img{
-    bottom: 0px;
+    bottom: 30px;
     font-size: 100px;
     align-self: center;
     position: absolute;
+    width: 85px;
+    height: auto;
   }
 
   .footer-btn-div{
     display: flex;
     justify-content: space-between;
-  }
-
-  .footer-btn {
-    
+    align-items: center;
+    padding: 20px;
   }
 
 }

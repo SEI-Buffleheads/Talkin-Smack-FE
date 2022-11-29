@@ -10,9 +10,9 @@ import { useState, useEffect } from "react";
 import { getUsers, getComments, getPosts } from "./services/apiCalls";
 
 function App() {
-  const [posts, setPosts] = useState({});
-  const [comments, setComments] = useState({});
-  const [users, setUsers] = useState({});
+  const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [users, setUsers] = useState([]);
   const [toggleApiCall, setToggleApiCall] = useState(false);
 
   useEffect(() => {
@@ -34,14 +34,16 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/splash" element={<Splash />} />
+        <Route path="/" element={<Splash />} />
         <Route
           path="/home"
-          element={<Home />}
-          comments={comments}
-          posts={posts}
-          setToggleApiCall={setToggleApiCall}
-        />
+          element={
+            <Home
+              comments={comments}
+              posts={posts}
+              users={users}
+              setToggleApiCall={setToggleApiCall}
+            /> } />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
