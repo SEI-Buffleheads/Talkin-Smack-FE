@@ -27,14 +27,15 @@ input[type="text"], input[type="password"] {
 
 .sign-form{
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: white;
   border: 4px solid black;
   box-shadow: -4px 4px black;
   border-radius: 12px;
   padding: 10px;
-  height: 40vh;
-  width: 60vw;
+  height: 45vh;
+  width: 35vh;
 }
 
 input[type=submit]
@@ -47,6 +48,7 @@ input[type=submit]
   font-weight: bold;
   font-size: 20px;
   float: right;
+  cursor: pointer;
 }
 
 input[type=text],

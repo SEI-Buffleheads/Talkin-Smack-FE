@@ -7,7 +7,7 @@ function Splash() {
     <div className="splash-wrapper">
       <div className="splash-div">
         <h1>Talkin-Schmack</h1>
-        <p>why have a conversation, when you could just Schmack em'</p>
+        <p>Why have a conversation, when you could just Schmack em'</p>
         <Splash_Footer />
       </div>
     </div>

@@ -15,18 +15,20 @@
   .signIn-container > button{
    z-index: 5;
    font-size: 20px;
+   cursor: pointer;
   }
-  /* .signIn > .login-btn{
-    align-self: flex-end;
-  } */
+  .signIn > .login-btn{
+    cursor: pointer;
+    /* align-self: flex-end; */
+  }
   .signIn{
     display: flex;
     flex-direction: column;
     /* gap: 10px; */
     align-items: center;
     padding: 10px;
-    height: 40vh;
-    width: 60vw;
+    height: 45vh;
+    width: 35vh;
     justify-content: center;
     background-color: white;
     border: 4px solid black;
@@ -70,4 +72,5 @@
     top: 10vh;
   }
 @media (max-width: 600px){
+
 }
