@@ -19,11 +19,13 @@ function App() {
     const callApi = async () => {
       const response = await getUsers();
       setUsers(response);
+      // console.log(response)
       const res = await getComments();
       setComments(res);
+      // console.log(res)
       const res2 = await getPosts();
       setPosts(res2);
-      await console.log(users, comments, posts)
+      // console.log(res2)
     };
     callApi();
   }, [toggleApiCall]);

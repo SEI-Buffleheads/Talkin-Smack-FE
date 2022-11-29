@@ -2,7 +2,7 @@ import api from "./apiConfig.js";
 
 export const getUsers = async () => {
   try {
-    const response = await api.get("/User");
+    const response = await api.get("/User/");
     return response.data;
   } catch (error) {
     throw error;
@@ -11,7 +11,7 @@ export const getUsers = async () => {
 
 export const getComments = async () => {
   try {
-    const response = await api.get("/Comment");
+    const response = await api.get("/Comment/");
     return response.data;
   } catch (error) {
     throw error;
@@ -20,7 +20,7 @@ export const getComments = async () => {
 
 export const getPosts = async () => {
   try {
-    const response = await api.get("/Post");
+    const response = await api.get("/Post/");
     return response.data;
   } catch (error) {
     throw error;
