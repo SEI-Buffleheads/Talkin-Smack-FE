@@ -15,7 +15,7 @@ function Navbar() {
           <Link to="/home">
             <img className="nav-img" src={feed} />
           </Link>
-          <Link to="/splash">
+          <Link to="/">
             <img className="nav-img" src={logout} />
           </Link>
         </div>
