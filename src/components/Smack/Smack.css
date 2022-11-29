@@ -1,9 +1,23 @@
+.smack-container{
+  display: flex;
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 12px;
+  background-color:rgba(255,255,255,0.3);
+  max-width: 600px;
+}
+
 .post {
-  width: 500px;
-  background-color: #fff;
-  border: 2mm ridge rgba(211, 220, 50, .6);
-  box-shadow: inset;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 12px;
+  gap: 30px; 
+  margin: 20px;
+  background-color:rgba(255,255,255, 1);
+  
 }
 
 .post-footer {
@@ -12,5 +26,26 @@
 }
 
 .post-content {
+  display: flex;
   padding: 10px;
+  flex-wrap: wrap;
+  word-break: break-all;
+}
+
+.post-header {
+  font-weight: bolder;
+}
+
+.post-content{
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .smack-container{
+
+    margin: 0px 40px 120px 40px;
+    display: inline-block
+  }
+
+
 }

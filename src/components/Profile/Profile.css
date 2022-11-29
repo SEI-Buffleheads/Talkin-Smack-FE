@@ -16,6 +16,7 @@
   box-shadow: 4px 4px black;
   border-radius: 12px;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .profile-info{
@@ -25,16 +26,23 @@
 }
 
 .profile-back{
+  /* position: absolute; */
   height: 20px;
-  padding-left: 150px;
-  padding-top: 55px;
+  padding: 10px;
+  /* padding-left: 150px; */
+  /* bottom: 45%; */
 }
 
 @media screen and (max-width: 700px) {
+  html, body{
+    height: 100%;
+    overflow: auto;
+  }
+  
   .profile-back{
-    all: unset;
+    /* all: unset;
     position: absolute;
     height: 20px;
-    padding: 20px;
+    padding: 20px; */
   }
 }
