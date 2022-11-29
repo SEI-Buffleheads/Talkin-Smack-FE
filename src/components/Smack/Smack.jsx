@@ -1,21 +1,27 @@
 import './Smack.css';
 
-function Smack({ comments, posts }) {
+function Smack({ users, comments, posts }) {
+  let names = []
 
   if (!posts){
     return null
   }
   if (posts){
-    console.log(posts[0])
+    console.log(users, posts)
+    names.push('nothing')
+    for (let user in users) {
+      names.push(users[user].username)
+    }
   }
 
 
   return (
     <div className='feed'>{posts.map((post) => (
       <div className='post'>
-        {post.content}
+        <div className='post-header'>{names[post.author]} said:</div>
+        <div className='post-content'>{post.content}</div>
         <div className='post-footer'>
-          <div></div>
+          <button>show replies</button>
           <div></div>
           <button>reply</button>
         </div>
