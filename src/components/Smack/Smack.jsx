@@ -12,6 +12,7 @@ function Smack({ users, comments, posts }) {
     for (let user in users) {
       names.push(users[user].username)
     }
+    console.log(names, users)
   }
 
 
