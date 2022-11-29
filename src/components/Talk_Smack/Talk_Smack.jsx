@@ -17,12 +17,11 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
       ...prev,
       [name]: value
     }))
-    console.log(post)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // await createPost(post)
+    await createPost(post)
     setToggleApiCall(prev => !prev)
   }
   
