@@ -27,6 +27,8 @@
   background-color: #fff;
   transform: translateY(-200px);
   transition: all 0.3s ease-in-out;
+  border: 4mm ridge rgba(211, 220, 50, .6);
+  box-shadow: inset;
 }
 
 .modal.enter-done .modal-content {
@@ -46,8 +48,20 @@
 }
 
 .modal-body {
+  margin: 10px;
   padding: 10px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   height: 100px;
+  border: thick double #32a1ce;
+  width: 450px;
+}
+
+.modal-footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+textarea {
+  resize: none;
 }
