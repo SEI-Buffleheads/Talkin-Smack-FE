@@ -2,7 +2,7 @@ import api from "./apiConfig.js";
 
 export const getUsers = async () => {
   try {
-    const response = await api.get("/User/");
+    const response = await api.get("/profiles/");
     return response.data;
   } catch (error) {
     throw error;
@@ -11,7 +11,16 @@ export const getUsers = async () => {
 
 export const getComments = async () => {
   try {
-    const response = await api.get("/Comment/");
+    const response = await api.get("/comments/");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getCommentsOnPost = async (id) => {
+  try {
+    const response = await api.get(`posts/${id}/comments/`);
     return response.data;
   } catch (error) {
     throw error;
@@ -20,7 +29,7 @@ export const getComments = async () => {
 
 export const getPosts = async () => {
   try {
-    const response = await api.get("/Post/");
+    const response = await api.get("/posts/");
     return response.data;
   } catch (error) {
     throw error;
@@ -29,7 +38,7 @@ export const getPosts = async () => {
 
 export const getUser = async (id) => {
   try {
-    const response = await api.get(`/Users/${id}`);
+    const response = await api.get(`/profiles/${id}`);
     return response.data;
   } catch (error) {
     throw error;
@@ -38,16 +47,16 @@ export const getUser = async (id) => {
 
 export const createUser = async (userData) => {
   try {
-    const response = await api.post("/Users/", userData);
+    const response = await api.post("/signup/", userData);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const createComment = async (commentData) => {
+export const createComment = async (id, commentData) => {
   try {
-    const response = await api.post("/Comment/", commentData);
+    const response = await api.post(`posts/${id}/comments/`, commentData);
     return response.data;
   } catch (error) {
     throw error;
@@ -56,7 +65,7 @@ export const createComment = async (commentData) => {
 
 export const createPost = async (postData) => {
   try {
-    const response = await api.post("/Post/", postData);
+    const response = await api.post("/posts/", postData);
     return response.data;
   } catch (error) {
     throw error;
@@ -65,7 +74,7 @@ export const createPost = async (postData) => {
 
 export const updateUser = async (id, userData) => {
   try {
-    const response = await api.put(`/Users/${id}`, userData);
+    const response = await api.put(`/profiles/${id}`, userData);
     return response.data;
   } catch (error) {
     throw error;
@@ -74,9 +83,10 @@ export const updateUser = async (id, userData) => {
 
 export const deleteUser = async (id) => {
   try {
-    const response = await api.delete(`/Users/${id}`);
+    const response = await api.delete(`/profiles/${id}`);
     return response.data;
   } catch (error) {
     throw error;
   } 
 };
+
