@@ -1,19 +1,4 @@
 import api from "./apiConfig.js";
-import axios from "axios";
-
-const apiURL = "https://talking-smack-2be-production.up.railway.app"
-
-// export const verifyUser = async (token) => {
-//   try {
-//     const instance = axios.create({
-//       baseURL: apiURL,
-//     })
-//     const response = await instance.post(`/verify`);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
 
 export const getUsers = async () => {
   try {
@@ -78,27 +63,33 @@ export const loginUser = async (userData) => {
   }
 };
 
-export const createComment = async (id, commentData) => {
+export const createComment = async (id, commentData, token) => {
   try {
-    const response = await api.post(`/posts/${id}/comments`, commentData);
+    const response = await api.post(`/posts/${id}/comments`, commentData,{
+      headers: {"Authorization":`Token ${token}`}
+    });
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const createPost = async (postData) => {
+export const createPost = async (postData, token) => {
   try {
-    const response = await api.post("/posts/", postData);
+    const response = await api.post("/posts", postData, {
+      headers: {"Authorization":`Token ${token}`}
+    });
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateUser = async (id, userData) => {
+export const updateUser = async (id, userData, token) => {
   try {
-    const response = await api.put(`/profiles/${id}`, userData);
+    const response = await api.put(`/profiles/${id}`, userData, {
+      headers: {"Authorization":`Token ${token}`}
+    });
     return response.data;
   } catch (error) {
     throw error;
@@ -113,21 +104,3 @@ export const deleteUser = async (id) => {
     throw error;
   } 
 };
-
-
-const userInfo = {
-  "username": "Danny2",
-  // "email": "danny@pellegrini2.com",
-  "password": "IsCool2",
-  // "re_password": "IsCool2"
-}
-
-// const comment = {
-//   "content":"This post was cool"
-// }
-
-// console.log(userInfo)
-
-const response1 = await loginUser(userInfo)
-console.log(response1.token)
-console.log(await verifyUser(response1.token))
