@@ -20,7 +20,7 @@
     flex-direction: column;
 
   }
-  .footer-img{
+  .footer-logo{
     bottom: 30px;
     /* font-size: 100px; */
     /* align-self: center; */
@@ -41,4 +41,10 @@
     color: black;
   }
 
+}
+
+@media screen and (max-width: 300px) {
+  .footer-logo{
+    display: none;
+  }
 }
