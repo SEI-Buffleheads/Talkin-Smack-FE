@@ -13,9 +13,9 @@ function Smack({ users, comments, posts }) {
   if (posts){
     names.push('nothing')
     for (let user in users) {
-      names.push(users[user].username)
+      names.push(users[user].name)
     }
-
+    console.log('names', names)
   }
 
 
@@ -24,7 +24,7 @@ function Smack({ users, comments, posts }) {
       <div className='feed'>{posts.map((post, index) => (
         <div className='post-container'>
           <div className='post'>
-            <div className='post-header'>{names[post.author]} said:</div>
+            <div className='post-header'>{names[post.user]} said:</div>
             <div className='post-content'>{post.content}</div>
             <div className='post-footer'>
               <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />

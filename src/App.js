@@ -20,16 +20,16 @@ function App() {
     const callApi = async () => {
       const response = await getUsers();
       setUsers(response);
-      // console.log(response)
+      console.log(response)
       const res = await getComments();
       setComments(res);
       console.log(res)
-      // const res3 = await getCommentsOnPost();
-      // setCommentsOnPost(res3);
-      // console.log(res3)
       const res2 = await getPosts();
       setPosts(res2);
       console.log(res2)
+      // const res3 = await getCommentsOnPost();
+      // setCommentsOnPost(res3);
+      // console.log(res3)
     };
     callApi();
   }, [toggleApiCall]);
