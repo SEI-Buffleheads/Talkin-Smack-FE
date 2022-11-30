@@ -8,7 +8,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [btn, setBtn] = useState('Register')
-  const [title, setTitle] = useState('Log In')
+  const [title, setTitle] = useState('')
   const [flip, setFlip] = useState({ transform: "rotateY(0deg)" });
   const [signUpPage, setSignUpPage] = useState({ "z-index": "-1" });
   const [toggle, setToggle] = useState(false);
@@ -18,7 +18,7 @@ function Login() {
       setFlip({ transform: "rotateY(0deg)" });
       setSignUpPage({ "z-index": "-1" });
       setBtn("Register")
-      setTitle("Log In")
+      setTitle("")
     } else {
       setFlip({ transform: "rotateY(180deg)" });
       setSignUpPage({ "z-index": "2" });
@@ -28,6 +28,7 @@ function Login() {
     setToggle((prevCheck) => !prevCheck);
   }
 
+  
   function handleSignInSubmit(e) {
     e.preventDefault();
   }
@@ -40,7 +41,7 @@ function Login() {
           <form className="signIn" onSubmit={handleSignInSubmit}>
             {/* <div className="signIn-logo"> */}
             <img className="login-logo" src={logoimg} />
-            <h2>Talkin Schmack</h2>
+            {/* <h2>Talkin Schmack</h2> */}
           {/* </div> */}
             <input
               type="text"
