@@ -16,10 +16,10 @@ export default function Reply_Button({ comments, post, setShow }) {
   
   if (replies.length == 0) return <div></div>
   if (replies.length == 1) return (
-    <button value={post} onClick={handleClick}>show reply</button>
+    <button value={post} onClick={handleClick}>comments</button>
   )
   
   return (
-    <button onClick={handleClick}>show replies</button>
+    <button onClick={handleClick}>comments</button>
   )
 }

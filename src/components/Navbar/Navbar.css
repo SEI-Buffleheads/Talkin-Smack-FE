@@ -15,7 +15,14 @@ nav{
   align-items: center;
 }
 
-.nav-img{
+.nav-img,
+.nav-logo{
   width: 70px;
   padding-top: 20px;
+}
+
+.nav-logo{
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px;
 }
