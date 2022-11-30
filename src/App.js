@@ -7,11 +7,12 @@ import Profile from "./components/Profile/Profile.jsx";
 import SignUp from "./components/Sign_Up/Sign_Up.jsx";
 import { useParams, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getUsers, getComments, getPosts } from "./services/apiCalls";
+import { getUsers, getComments, getCommentsOnPost, getPosts } from "./services/apiCalls";
 
 function App() {
   const [posts, setPosts] = useState([]);
   const [comments, setComments] = useState([]);
+  const [commentsOnPost, setCommentsOnPost] = useState([]);
   const [users, setUsers] = useState([]);
   const [toggleApiCall, setToggleApiCall] = useState(false);
 
@@ -22,10 +23,13 @@ function App() {
       // console.log(response)
       const res = await getComments();
       setComments(res);
-      // console.log(res)
+      console.log(res)
+      // const res3 = await getCommentsOnPost();
+      // setCommentsOnPost(res3);
+      // console.log(res3)
       const res2 = await getPosts();
       setPosts(res2);
-      // console.log(res2)
+      console.log(res2)
     };
     callApi();
   }, [toggleApiCall]);
