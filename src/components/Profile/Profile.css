@@ -6,6 +6,7 @@
   height: 50vh;
   gap: 4px;
   margin-top: 50px;
+
 }
 
 .profile-form{
@@ -33,16 +34,20 @@
   /* bottom: 45%; */
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 300px) {
   html, body{
     height: 100%;
     overflow: auto;
   }
   
-  .profile-back{
-    /* all: unset;
-    position: absolute;
-    height: 20px;
-    padding: 20px; */
+}
+
+@media screen and (max-height: 700px) {
+  .profile-container{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
