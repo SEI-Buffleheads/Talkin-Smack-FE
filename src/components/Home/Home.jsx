@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 function Home({ users, comments, posts, setToggleApiCall }) {
   const [showModal, setShowModal] = useState(false)
   
-
+  setToggleApiCall((prev)=>![prev])
 
   return (
     <>
