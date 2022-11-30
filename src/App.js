@@ -4,7 +4,7 @@ import Home from "./components/Home/Home.jsx";
 import Login from "./components/Login/Login.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Profile from "./components/Profile/Profile.jsx";
-import SignUp from "./components/Sign_Up/Sign_Up.jsx";
+import Sign_Up from "./components/Sign_Up/Sign_Up.jsx";
 import { useParams, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getUsers, getComments, getCommentsOnPost, getPosts } from "./services/apiCalls";
@@ -15,19 +15,16 @@ function App() {
   const [commentsOnPost, setCommentsOnPost] = useState([]);
   const [users, setUsers] = useState([]);
   const [toggleApiCall, setToggleApiCall] = useState(false);
-  const [token, setToken] = useState();
+  const [token, setToken] = useState(null);
 
   useEffect(() => {
     const callApi = async () => {
       const response = await getUsers();
       setUsers(response);
-      console.log(response)
       const res = await getComments();
       setComments(res);
-      console.log(res)
       const res2 = await getPosts();
       setPosts(res2);
-      console.log(res2)
       // const res3 = await getCommentsOnPost();
       // setCommentsOnPost(res3); 
       // console.log(res3)
@@ -59,7 +56,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login setToken={setToken} />} />
-        <Route path="/signup" element={<SignUp setToken={setToken} />} />
+        <Route path="/signup" element={<Sign_Up setToken={setToken} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>

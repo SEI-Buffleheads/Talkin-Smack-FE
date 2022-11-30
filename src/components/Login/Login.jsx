@@ -2,7 +2,8 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Sign_Up from "../Sign_Up/Sign_Up";
-import logoimg from '../Home/Footer/img/logo.png'
+import logoimg from '../Home/Footer/img/logo.png';
+import { loginUser } from "../../services/apiCalls";
 
 function Login() {
   const [username, setUsername] = useState("");

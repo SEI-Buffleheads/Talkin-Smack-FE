@@ -47,7 +47,16 @@ export const getUser = async (id) => {
 
 export const createUser = async (userData) => {
   try {
-    const response = await api.post("/signup/", userData);
+    const response = await api.post("/signup", userData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const loginUser = async (userData) => {
+  try {
+    const response = await api.post("/login/", userData);
     return response.data;
   } catch (error) {
     throw error;
