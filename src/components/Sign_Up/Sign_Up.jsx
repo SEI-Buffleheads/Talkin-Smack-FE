@@ -15,7 +15,7 @@ function Sign_Up() {
       setEmail(e.target.value)
     } else if (e.target.id === 'password') {
       setPassword(e.target.value)
-    } else if (e.target.id === 'confirm_password') {
+    } else if (e.target.id === 're_password') {
       setPasswordConfirm(e.target.value)
     }
   }
@@ -28,13 +28,12 @@ function Sign_Up() {
   return (
     <div className="form-container">
       <div className="form">
-        {/* <h1>Sign Up</h1> */}
         <div className="sign-form">
           <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Username" onChange={handleChange} id="username" />
           <input type="text" placeholder="Email" onChange={handleChange} id="email" />
           <input type="password" placeholder="Password" onChange={handleChange} id="password" />
-          <input type="password" placeholder="Confirm Password" onChange={handleChange} id="confirm_password" />
+          <input type="password" placeholder="Confirm Password" onChange={handleChange} id="re_password" />
           <input type="submit" value="Submit" />
           </form>
           </div>
