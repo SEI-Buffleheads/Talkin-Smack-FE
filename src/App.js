@@ -15,6 +15,7 @@ function App() {
   const [commentsOnPost, setCommentsOnPost] = useState([]);
   const [users, setUsers] = useState([]);
   const [toggleApiCall, setToggleApiCall] = useState(false);
+  const [token, setToken] = useState();
 
   useEffect(() => {
     const callApi = async () => {
@@ -28,11 +29,18 @@ function App() {
       setPosts(res2);
       console.log(res2)
       // const res3 = await getCommentsOnPost();
-      // setCommentsOnPost(res3);
+      // setCommentsOnPost(res3); 
       // console.log(res3)
+      //take this and use to attach comments to posts
     };
     callApi();
   }, [toggleApiCall]);
+
+  setTimeout(() => {
+    if (!token) {
+      return <Login setToken={setToken} /> 
+    }
+  }, 45000);
 
   return (
     <>
@@ -47,9 +55,11 @@ function App() {
               posts={posts}
               users={users}
               setToggleApiCall={setToggleApiCall}
-            /> } />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+            />
+          }
+        />
+        <Route path="/login" element={<Login setToken={setToken} />} />
+        <Route path="/signup" element={<SignUp setToken={setToken} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
