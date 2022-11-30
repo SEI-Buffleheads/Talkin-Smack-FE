@@ -32,7 +32,7 @@ function App() {
       console.log(res2)
     };
     callApi();
-  }, []);
+  }, [toggleApiCall]);
 
   return (
     <>
