@@ -61,7 +61,7 @@
 @media screen and (max-width: 700px) {
   .smack-container{
     height: 75vh;
-    margin: 0px 40px 120px 40px;
+    margin: 0px 20px 120px 20px;
     display: inline-block;
   }
 
