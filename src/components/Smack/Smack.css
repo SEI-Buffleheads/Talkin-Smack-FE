@@ -45,7 +45,8 @@
   display: flex;
   padding: 10px;
   flex-wrap: wrap;
-  word-break: break-all;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .reply-header,.post-header {
