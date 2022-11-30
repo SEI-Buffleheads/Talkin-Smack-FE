@@ -35,8 +35,9 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
             </div>
             <textarea
               className="modal-body"
-              placeholder="Talk Smack"
+              placeholder="Smack talking starts here..."
               name="content"
+              maxlength="155"
               value={post.content}
               onChange={handleChange}
             />
