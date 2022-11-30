@@ -1,5 +1,6 @@
 import './Sign_Up.css';
-import { useState, useNavigate } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function Sign_Up() {
 
@@ -10,6 +11,7 @@ function Sign_Up() {
   const [avatar, setAvatar] = useState('')
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = e => {
     if (e.target.id === 'first_name') {
@@ -30,7 +32,8 @@ function Sign_Up() {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    navigate("/home");
     // code goes here
   }
 
