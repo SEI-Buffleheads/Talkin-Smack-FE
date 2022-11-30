@@ -31,12 +31,13 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
         <form onSubmit={handleSubmit}>
           <div className="modal-content">
             <div className="modal-header">
-              <h4 className="modal-title">Talk Smack</h4>
+            <h4 className="modal-title">Talk Smack</h4>
             </div>
             <textarea
               className="modal-body"
-              placeholder="Talk Smack"
+              placeholder="Smack talking starts here..."
               name="content"
+              maxlength="155"
               value={post.content}
               onChange={handleChange}
             />
