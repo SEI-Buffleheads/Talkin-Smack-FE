@@ -1,6 +1,7 @@
 import './Sign_Up.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { createUser } from "../../services/apiCalls";
 
 function Sign_Up() {
 
@@ -22,10 +23,10 @@ function Sign_Up() {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    createUser(username, email, password, passwordConfirm)
     navigate("/home");
-    // code goes here
   }
 
   return (
