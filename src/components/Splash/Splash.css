@@ -35,6 +35,11 @@
   animation: contentSlide 1s;
   width: 45vh;
 }
+
+.splash-logo{
+  width: 300px;
+}
+
 @keyframes titleSlide{
   from{transform: translateX(-100vw)} to {transform: translateX(0)}
 }
