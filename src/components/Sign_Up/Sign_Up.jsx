@@ -26,7 +26,6 @@ function Sign_Up() {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/home");
-    // code goes here
   }
 
   return (
