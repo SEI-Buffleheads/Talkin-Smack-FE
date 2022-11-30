@@ -47,10 +47,7 @@
     transition: transform 1s;
     justify-content: center;
   }
-  .signInInput{
-    display: flex;
-    justify-content: space-evenly;
-  }
+
   .signUp-form{
     display: flex;
     position: absolute;
@@ -68,12 +65,20 @@
   .login-logo{
     height: 100px;
     width: 100px;
+    padding-bottom: 30px;
   }
   .login-title{
     width: 300px;
     height: 100px;
     /* position: absolute; */
     top: 10vh;
+  }
+  .signIn > input[type=text],
+  [type=password]{
+    margin-bottom: 10px;
+  }
+  .signIn > input[type=submit]{
+    margin-top: 15px;
   }
 @media (max-width: 600px){
 
