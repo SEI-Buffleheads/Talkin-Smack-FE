@@ -1,5 +1,5 @@
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Sign_Up from "../Sign_Up/Sign_Up";
 import logoimg from '../Home/Footer/img/logo.png'
@@ -12,6 +12,7 @@ function Login() {
   const [flip, setFlip] = useState({ transform: "rotateY(0deg)" });
   const [signUpPage, setSignUpPage] = useState({ "z-index": "-1" });
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
 
   function toggleFlip() {
     if (toggle === true) {
@@ -31,6 +32,7 @@ function Login() {
   
   function handleSignInSubmit(e) {
     e.preventDefault();
+    navigate("/home");
   }
 
   return (
