@@ -1,5 +1,6 @@
 import './Sign_Up.css';
-import { useState, useNavigate } from 'react';
+import { useState } from 'react';
+import { createUser } from "../../services/apiCalls"; 
 
 function Sign_Up() {
 
