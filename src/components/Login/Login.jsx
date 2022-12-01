@@ -2,11 +2,15 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Sign_Up from "../Sign_Up/Sign_Up";
-import logoimg from '../Home/Footer/img/logo.png'
+import logoimg from '../Home/Footer/img/logo.png';
+import {useLogin} from '../../hooks/useLogin'
 
 function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const {login, error, isLoading} = useLogin()
+  const [user, setUser] = useState({
+    username: "",
+    password: ""
+  });
   const [btn, setBtn] = useState('Register')
   const [title, setTitle] = useState('')
   const [flip, setFlip] = useState({ transform: "rotateY(0deg)" });
@@ -29,43 +33,50 @@ function Login() {
     setToggle((prevCheck) => !prevCheck);
   }
 
-  
-  function handleSignInSubmit(e) {
+  const handleChange = (e) => {
     e.preventDefault();
+    setUser({
+      ...user,
+      [e.target.id]: e.target.value,
+    });
+  };
+  
+  const handleSignInSubmit = async (e) => {
+    e.preventDefault();
+    await login(user)
     navigate("/home");
   }
 
   return (
     <>
       <div className="signIn-container">
-        <div className="login-title"><h1>{title}</h1></div>
+        <div className="login-title">
+          <h1>{title}</h1>
+        </div>
         <div className="signIn-form" style={flip}>
           <form className="signIn" onSubmit={handleSignInSubmit}>
             {/* <div className="signIn-logo"> */}
             <img className="login-logo" src={logoimg} />
             {/* <h2>Talkin Schmack</h2> */}
-          {/* </div> */}
+            {/* </div> */}
             <input
               type="text"
-              value={username}
+              value={user.username}
               placeholder="Username"
-              name="username"
               id="username"
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={handleChange}
             />
             <input
               type="password"
-              value={password}
+              value={user.password}
               placeholder="Password"
-              name="password"
               id="password"
               autoComplete="on"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handleChange}
             />
-            <input
-              type="submit"
-              className="login-btn"
-              value="Sign In" />
+            <button className="login-btn">Submit</button>
+            {/* <input type="submit" disabled={isLoading} className="login-btn" value="Sign In" /> */}
+            {error && <div className="error">{error}</div>}
           </form>
           <div className="signUp-form" style={signUpPage}>
             <Sign_Up />

@@ -1,5 +1,19 @@
 import api from "./apiConfig.js";
 
+export const verifyUser = async (token) => {
+  const axiosConfig = {
+    headers: {
+      "Authorization":`Token ${token}`
+    }
+  }
+  try {
+    const response = await api.get("/profile", axiosConfig);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const getUsers = async () => {
   try {
     const response = await api.get("/profiles");
@@ -46,8 +60,11 @@ export const getUser = async (id) => {
 };
 
 export const createUser = async (userData) => {
+  const axiosConfig = {
+    headers: {'Content-Type': 'application/json'}
+  }
   try {
-    const response = await api.post("/signup", userData);
+    const response = await api.post("/signup", userData, axiosConfig);
     return response.data;
   } catch (error) {
     throw error;
@@ -55,8 +72,11 @@ export const createUser = async (userData) => {
 };
 
 export const loginUser = async (userData) => {
+  const axiosConfig = {
+    headers: { "Content-Type": "application/json" },
+  };
   try {
-    const response = await api.post("/login", userData);
+    const response = await api.post("/login", userData, axiosConfig);
     return response.data;
   } catch (error) {
     throw error;
@@ -104,3 +124,4 @@ export const deleteUser = async (id) => {
     throw error;
   } 
 };
+

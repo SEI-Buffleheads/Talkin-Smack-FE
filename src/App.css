@@ -41,4 +41,10 @@ button{
   nav{
     display: none;
   }
+  
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
 }

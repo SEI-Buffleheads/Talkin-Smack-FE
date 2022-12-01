@@ -1,14 +1,14 @@
-import "./Talk_Smack.css";
+import "../Talk_Smack/Talk_Smack.css";
 import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
-import { createPost, verifyUser } from "../../services/apiCalls";
-import * as ReactDOM  from "react-dom";
-import { useAuthContext } from "../../hooks/useAuthContext.js"
+import { createComment, verifyUser } from "../../services/apiCalls";
+import * as ReactDOM from "react-dom";
+import { useAuthContext } from "../../hooks/useAuthContext.js";
 
-function Talk_Smack({ show, close, setToggleApiCall }) {
-  const { user } = useAuthContext()
+function Reply({ index, show, close, setToggleApiCall }) {
+  const { user } = useAuthContext();
   const [post, setPost] = useState({
-    content: ""
+    content: "",
   });
 
   const handleChange = (e) => {
@@ -17,19 +17,13 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
       content: value,
     });
   };
-
-  const closeItDown = () => {
-    setPost({ content: "" })
-    close()
-  }
-
+  let id = index + 1
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(post,user)
-    await createPost(post,user.token);
+    await createComment(id, post, user.token);
     setToggleApiCall((prev) => !prev);
-    setPost({content: ""})
-    close()
+    close();
   };
 
   return ReactDOM.createPortal(
@@ -38,7 +32,7 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
         <form onSubmit={handleSubmit}>
           <div className="modal-content">
             <div className="modal-header">
-            <h4 className="modal-title">Talk Smack</h4>
+              <h4 className="modal-title">Talk Smack</h4>
             </div>
             <textarea
               className="modal-body"
@@ -49,16 +43,18 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
               onChange={handleChange}
             />
             <div className="modal-footer">
-              <button onClick={closeItDown}>close</button>
+              <button onClick={close}>close</button>
               <div></div>
-              <button className="submit">submit</button>
+              <button className="submit" type="submit">
+                submit
+              </button>
             </div>
           </div>
         </form>
       </div>
     </CSSTransition>,
-    document.getElementById('root')
+    document.getElementById("root")
   );
 }
 
-export default Talk_Smack;
+export default Reply;

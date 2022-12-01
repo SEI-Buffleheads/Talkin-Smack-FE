@@ -2,14 +2,15 @@
 
 
 .home-container {
-  /* margin-left: 15%; */
+  margin-left: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
   height: 100vh;
-  width: 100%;
+  width: 75%;
   overflow: hidden;
+  /* margin-left: 100px; */
 }
 .home-talksmack-container{
   display: flex;
@@ -47,7 +48,8 @@
 }
 .home-talksmack-footer{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 .home-talksmack-body{
   width: 98%;
@@ -56,6 +58,11 @@
   border-radius: 12px;
   font-size: 15px;
 }
+.smack-modal-button{
+  width: 70%;
+  height: 65px;
+  font-size: 30px;
+}
 
 @media screen and (max-width: 700px) {
   .home-talksmack-box{
@@ -63,6 +70,13 @@
   }
   .home-talksmack-container{
     align-items: center;
+  }
+  .smack-modal-button{
+    font-size: medium;
+  }
+  .home-container{
+    margin: 0px;
+    width: 100%;
   }
 }
 

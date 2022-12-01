@@ -1,19 +1,22 @@
 import "./Home.css";
-import { Link, Routes, Route } from "react-router-dom";
+import Search from '../Search/Search';
 import Smack_Feed from "../Smack/Smack_Feed.jsx";
 import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx";
 import Home_Footer from "./Footer/Home_Footer.jsx";
 import { useEffect, useState } from "react";
+import {useAuthContext} from '../../hooks/useAuthContext'
 
 function Home({ users, comments, posts, setToggleApiCall }) {
   const [showModal, setShowModal] = useState(false);
+  const [search, setSearch] = useState('')
+  const {user} = useAuthContext()
 
   setToggleApiCall((prev) => ![prev]);
 
   const [post, setPost] = useState({
     title: "User said: ",
     content: "",
-    author: 5, //i think this should be taken from useParams later when we have authorization
+    author: 5, //verify should send back an id 
   });
 
   const handleChange = (e) => {
@@ -27,36 +30,31 @@ function Home({ users, comments, posts, setToggleApiCall }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // await createPost(post);
-    // setToggleApiCall((prev) => !prev);
+    setToggleApiCall((prev) => !prev);
   };
+
+  const modalFunc = () => {
+    if (!user) {
+      return alert("you must sign in to talk schmack")
+    }
+    setShowModal(true)
+  }
+
+//   if (!user) {
+//   setTimeout(() => {
+//     setShowModal(true)
+//   }, 1000);
+// }
 
   return (
     <>
       <div className="home-container">
-        <h1>Hello Home</h1>
-        <span className="home-talksmack-container">
-          <div className="home-talksmack-box">
-            <h3 className="home-talksmack-title">Talk Smack</h3>
-            <form className="home-talksmack-content" onSubmit={handleSubmit}>
-              <textarea
-                className="home-talksmack-body"
-                placeholder="Smack talking starts here..."
-                name="content"
-                maxlength="155"
-                value={post.content}
-                onChange={handleChange}
-              />
-              <div className="home-talksmack-footer">
-                <button onClick={() => setShowModal(true)}>Talk Smack!</button>
-                <button className="submit" type="submit">
-                  submit
-                </button>
-              </div>
-          </form>
-          </div>
-          </span>
-        <Talk_Smack show={showModal} close={() => setShowModal(false)} />
-        <Smack_Feed users={users} comments={comments} posts={posts} />
+        {/* <Search setSearch={setSearch} /> */}
+        <div className="home-talksmack-footer">
+                <button className="smack-modal-button" onClick={modalFunc}>💥Click to Shmack💥</button>
+        </div>
+        <Talk_Smack show={showModal} close={() => setShowModal(false)} setToggleApiCall={setToggleApiCall} />
+        <Smack_Feed users={users} comments={comments} posts={posts} setToggleApiCall={setToggleApiCall} />
       </div>
       <Home_Footer />
     </>

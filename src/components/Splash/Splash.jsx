@@ -1,7 +1,7 @@
 import "./Splash.css";
 import Splash_Footer from "./Footer/Splash_Footer.jsx";
 import { Link, Routes, Route } from "react-router-dom";
-import logo from "../img/logo-transparent.png"
+import logo from "../img/logo-transparent-final.png"
 
 function Splash() {
   return (

@@ -1,45 +1,74 @@
-import './Sign_Up.css';
-import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { createUser } from "../../services/apiCalls"; 
+import "./Sign_Up.css";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { createUser } from "../../services/apiCalls";
+import { useSignup } from "../../hooks/useSignup";
 
 function Sign_Up() {
+  const { signup, error, isLoading } = useSignup();
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    password: "",
+    re_password: "",
+  });
 
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('');
-  const [passwordConfirm, setPasswordConfirm] = useState('');
   const navigate = useNavigate();
 
-  const handleChange = e => {
-    if (e.target.id === 'username') {
-      setUsername(e.target.value)
-    } else if (e.target.id === 'email') {
-      setEmail(e.target.value)
-    } else if (e.target.id === 'password') {
-      setPassword(e.target.value)
-    } else if (e.target.id === 're_password') {
-      setPasswordConfirm(e.target.value)
-    }
-  }
-
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
-    navigate("/home");
-  }
+    setUser({
+      ...user,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await signup(user);
+    navigate("/profile");
+  };
 
   return (
     <div className="form-container">
       <div className="form">
         <div className="sign-form">
-          <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Username" onChange={handleChange} id="username" />
-          <input type="text" placeholder="Email" onChange={handleChange} id="email" />
-          <input type="password" placeholder="Password" onChange={handleChange} id="password" />
-          <input type="password" placeholder="Confirm Password" onChange={handleChange} id="re_password" />
-          <input type="submit" value="Submit" />
+          <form className="signup-input" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Username"
+              value={user.username}
+              onChange={handleChange}
+              id="username"
+            />
+            <input
+              type="text"
+              placeholder="Email"
+              value={user.email}
+              onChange={handleChange}
+              id="email"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={user.password}
+              onChange={handleChange}
+              id="password"
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={user.passwordConfirm}
+              onChange={handleChange}
+              id="re_password"
+            />
+            <div className="form-bottom">
+              <button className="signup-btn">Submit</button>
+              {/* <input type="submit" value="Submit" disabled={isLoading} /> */}
+              {error && <div className="error">{error}</div>}
+            </div>
           </form>
-          </div>
+        </div>
       </div>
     </div>
   );
