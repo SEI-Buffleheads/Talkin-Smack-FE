@@ -2,7 +2,7 @@ import api from "./apiConfig.js";
 
 export const getUsers = async () => {
   try {
-    const response = await api.get("/profiles/");
+    const response = await api.get("/profiles");
     return response.data;
   } catch (error) {
     throw error;
@@ -11,7 +11,7 @@ export const getUsers = async () => {
 
 export const getComments = async () => {
   try {
-    const response = await api.get("/comments/");
+    const response = await api.get("/comments");
     return response.data;
   } catch (error) {
     throw error;
@@ -20,7 +20,7 @@ export const getComments = async () => {
 
 export const getCommentsOnPost = async (id) => {
   try {
-    const response = await api.get(`posts/${id}/comments/`);
+    const response = await api.get(`posts/${id}/comments`);
     return response.data;
   } catch (error) {
     throw error;
@@ -29,7 +29,7 @@ export const getCommentsOnPost = async (id) => {
 
 export const getPosts = async () => {
   try {
-    const response = await api.get("/posts/");
+    const response = await api.get("/posts");
     return response.data;
   } catch (error) {
     throw error;
@@ -69,27 +69,42 @@ export const loginUser = async (userData) => {
   }
 };
 
-export const createComment = async (id, commentData) => {
+export const loginUser = async (userData) => {
   try {
-    const response = await api.post(`posts/${id}/comments/`, commentData);
+    const response = await api.post("/login", userData);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const createPost = async (postData) => {
+export const createComment = async (id, commentData, token) => {
   try {
-    const response = await api.post("/posts/", postData);
+    const response = await api.post(`/posts/${id}/comments`, commentData,{
+      headers: {"Authorization":`Token ${token}`}
+    });
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateUser = async (id, userData) => {
+export const createPost = async (postData, token) => {
   try {
-    const response = await api.put(`/profiles/${id}`, userData);
+    const response = await api.post("/posts", postData, {
+      headers: {"Authorization":`Token ${token}`}
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updateUser = async (id, userData, token) => {
+  try {
+    const response = await api.put(`/profiles/${id}`, userData, {
+      headers: {"Authorization":`Token ${token}`}
+    });
     return response.data;
   } catch (error) {
     throw error;
@@ -104,4 +119,3 @@ export const deleteUser = async (id) => {
     throw error;
   } 
 };
-
