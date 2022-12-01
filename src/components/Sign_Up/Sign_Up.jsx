@@ -32,7 +32,7 @@ function Sign_Up() {
     <div className="form-container">
       <div className="form">
         <div className="sign-form">
-          <form onSubmit={handleSubmit}>
+          <form className="signup-input" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Username"
