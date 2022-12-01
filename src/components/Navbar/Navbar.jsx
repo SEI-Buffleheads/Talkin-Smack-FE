@@ -21,9 +21,6 @@ function Navbar() {
     <>
       <nav>
         <div className="nav-div">
-        <Link to="/home">
-            <img className="nav-img" src={feed} />
-          </Link>
           {user && (
             <Link to="/profile">
               <img className="nav-img" src={profile} />
@@ -31,6 +28,9 @@ function Navbar() {
           ) || <Link to="/login">
               <img className="nav-img" src={signin} />
             </Link>}
+          <Link to="/home">
+            <img className="nav-img" src={feed} />
+          </Link>
           {user && (
             <Link to="/">
               <img onClick={handleClick} className="nav-img" src={logout} />

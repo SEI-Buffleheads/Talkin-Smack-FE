@@ -91,7 +91,7 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 
 ## Content Management
 
-- github pages screenshot
+![Flow Chart](./img/gitproj.png)
 [GitHub Projects](https://github.com/orgs/SEI-Buffleheads/projects/3/views/1?layout=table)
 
 ---
@@ -114,15 +114,17 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 
 - Smack and SmackDown buttons
 - For You Page
+- User Image
+- Search functionality
 
 ## Project Schedule
 
 | Date      | Deliverable                                                |   Status   |
 | :-------- | :--------------------------------------------------------- | :--------: |
 | Nov 21     | Wireframes + Final Project Approval                       |  Complete  |
-| Nov 22     | Basic Front End, Back End Deployment                       | Incomplete |
-| Nov 28     |                        | Incomplete |
-| Nov 29     | Continue Back-End + Testing + Develop Front-End Components | Incomplete |
-| Nov 30     | React Front-End MVP + CSS Styling                          | Incomplete |
-| Dec 1      | Refine CSS and proceed with Post-MVP Improvements          | Incomplete |
+| Nov 22     | Basic Front End, Back End Deployment                       | Complete |
+| Nov 28     | Continue Back-End + Testing + Develop Front-End Components | Complete |
+| Nov 29     | Continue Back-End + Testing + Develop Front-End Components | Complete |
+| Nov 30     | React Front-End MVP + CSS Styling                          | Complete |
+| Dec 1      | Refine CSS and proceed with Post-MVP Improvements          | Complete |
 | Dec 2      | Present and Celebrate                                      | Incomplete |
