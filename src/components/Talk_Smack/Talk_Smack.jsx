@@ -20,14 +20,8 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!user){
-      alert("Please log in to post")
-      close()
-      return
-    }
     // console.log(post,user)
-    const profile = await verifyUser(user.token)
-    console.log(await createPost(post,user.token));
+    await createPost(post,user.token);
     setToggleApiCall((prev) => !prev);
     close()
   };
