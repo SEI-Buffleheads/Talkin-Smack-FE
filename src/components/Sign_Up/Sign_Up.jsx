@@ -63,7 +63,8 @@ function Sign_Up() {
               id="re_password"
             />
             <div className="form-bottom">
-              <input type="submit" value="Submit" disabled={isLoading} />
+              <button className="signup-btn">Submit</button>
+              {/* <input type="submit" value="Submit" disabled={isLoading} /> */}
               {error && <div className="error">{error}</div>}
             </div>
           </form>

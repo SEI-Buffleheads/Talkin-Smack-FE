@@ -74,7 +74,8 @@ function Login() {
               autoComplete="on"
               onChange={handleChange}
             />
-            <input type="submit" disabled={isLoading} className="login-btn" value="Sign In" />
+            <button className="login-btn">Submit</button>
+            {/* <input type="submit" disabled={isLoading} className="login-btn" value="Sign In" /> */}
             {error && <div className="error">{error}</div>}
           </form>
           <div className="signUp-form" style={signUpPage}>
