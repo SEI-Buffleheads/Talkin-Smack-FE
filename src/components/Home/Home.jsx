@@ -33,6 +33,13 @@ function Home({ users, comments, posts, setToggleApiCall }) {
     setToggleApiCall((prev) => !prev);
   };
 
+  const modalFunc = () => {
+    if (!user) {
+      return alert("you must sign in to talk schmack")
+    }
+    setShowModal(true)
+  }
+
 //   if (!user) {
 //   setTimeout(() => {
 //     setShowModal(true)
@@ -56,7 +63,7 @@ function Home({ users, comments, posts, setToggleApiCall }) {
                 onChange={handleChange}
               />
               <div className="home-talksmack-footer">
-                <button onClick={() => setShowModal(true)}>Talk Smack!</button>
+                <button onClick={modalFunc}>Talk Smack!</button>
                 <button className="submit" type="submit">
                   submit
                 </button>
