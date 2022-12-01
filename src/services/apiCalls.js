@@ -62,7 +62,7 @@ export const loginUser = async (userData) => {
     headers: { "Content-Type": "application/json" },
   };
   try {
-    const response = await api.post("/login/", userData, axiosConfig);
+    const response = await api.post("/login", userData, axiosConfig);
     return response.data;
   } catch (error) {
     throw error;

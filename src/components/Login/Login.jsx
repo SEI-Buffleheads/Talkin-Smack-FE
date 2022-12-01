@@ -44,7 +44,7 @@ function Login() {
   const handleSignInSubmit = async (e) => {
     e.preventDefault();
     await login(user)
-    navigate("/home");
+    // navigate("/home");
   }
 
   return (
@@ -63,7 +63,6 @@ function Login() {
               type="text"
               value={user.username}
               placeholder="Username"
-              name="username"
               id="username"
               onChange={handleChange}
             />
@@ -71,7 +70,6 @@ function Login() {
               type="password"
               value={user.password}
               placeholder="Password"
-              name="password"
               id="password"
               autoComplete="on"
               onChange={handleChange}
