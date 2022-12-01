@@ -33,6 +33,13 @@ function Home({ users, comments, posts, setToggleApiCall }) {
     setToggleApiCall((prev) => !prev);
   };
 
+  const modalFunc = () => {
+    if (!user) {
+      return alert("you must sign in to talk schmack")
+    }
+    setShowModal(true)
+  }
+
 //   if (!user) {
 //   setTimeout(() => {
 //     setShowModal(true)
@@ -43,32 +50,11 @@ function Home({ users, comments, posts, setToggleApiCall }) {
     <>
       <div className="home-container">
         {/* <Search setSearch={setSearch} /> */}
-        <span className="home-talksmack-container">
-          {/* <div className="home-talksmack-box"> */}
-            {/* <h3 className="home-talksmack-title">Talk Smack</h3> */}
-            {/* <form className="home-talksmack-content" onSubmit={handleSubmit}>
-              <textarea
-                className="home-talksmack-body"
-                placeholder="Smack talking starts here..."
-                name="content"
-                maxlength="155"
-                value={post.content}
-                onChange={handleChange}
-              />
-              <div className="home-talksmack-footer">
-                <button onClick={() => setShowModal(true)}>Talk Smack!</button>
-                <button className="submit" type="submit">
-                  submit
-                </button>
-              </div>
-            </form> */}
-          {/* </div> */}
-        </span>
         <div className="home-talksmack-footer">
-                <button className="smack-modal-button" onClick={() => setShowModal(true)}>💥Click to Shmack💥</button>
+                <button className="smack-modal-button" onClick={modalFunc}>💥Click to Shmack💥</button>
         </div>
         <Talk_Smack show={showModal} close={() => setShowModal(false)} setToggleApiCall={setToggleApiCall} />
-        <Smack_Feed users={users} comments={comments} posts={posts} />
+        <Smack_Feed users={users} comments={comments} posts={posts} setToggleApiCall={setToggleApiCall} />
       </div>
       <Home_Footer />
     </>
