@@ -1,0 +1,85 @@
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  .signIn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    gap: 20px;
+  }
+  .signIn-container > button{
+   z-index: 5;
+   font-size: 20px;
+   cursor: pointer;
+   margin-top: 15px;
+  }
+  .signIn > .login-btn{
+    cursor: pointer;
+    /* align-self: flex-end; */
+  }
+  .signIn{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    align-items: center;
+    padding: 10px;
+    height: 380px;
+    width: 300px;
+    justify-content: center;
+    background-color: white;
+    border: 4px solid black;
+    box-shadow: 4px 4px black;
+    border-radius: 12px;
+  }
+  .signIn > h2{
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .signIn-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s;
+    justify-content: center;
+  }
+
+  .signUp-form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    transition: z-index 0.3s step-end;
+  }
+  .login-logo{
+    height: 100px;
+    width: 100px;
+    padding-bottom: 30px;
+  }
+  .login-title{
+    width: 300px;
+    height: 100px;
+    /* position: absolute; */
+    top: 10vh;
+  }
+  .signIn > input[type=text],
+  [type=password]{
+    margin-bottom: 10px;
+  }
+  .signIn > input[type=submit]{
+    margin-top: 15px;
+  }
+@media (max-width: 600px){
+
+}

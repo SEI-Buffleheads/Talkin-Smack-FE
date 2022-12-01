@@ -1,0 +1,30 @@
+.splash-footer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+}
+
+.splash-footer-buttons{
+  display: flex;
+  justify-content: space-around;
+  animation: btnPop 2s ;
+}
+@keyframes btnPop{
+  0%, 10%, 20%, 40%{
+    transform: scale(0);
+  }
+  60%{
+    transform: scale(1.15)
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.splash-footer-btn{
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 5;
+}
+

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+
+.home-container {
+  /* margin-left: 15%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.home-talksmack-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.home-talksmack-box{
+  /* width: 100%; */
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 12px;
+  background-color:rgba(255,255,255,0.3);
+  gap: 0px;
+  /* border: 5px solid red; */
+}
+.home-talksmack-box >h3{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.home-talksmack-content{
+  /* height: 90vh; */
+  width: 90%;
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 10px;
+}
+.home-talksmack-footer{
+  display: flex;
+  justify-content: space-between;
+}
+.home-talksmack-body{
+  width: 98%;
+  height: 12vh;
+  border: 5px double black;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  .home-talksmack-box{
+    width: 93%;
+  }
+  .home-talksmack-container{
+    align-items: center;
+  }
+}
+
