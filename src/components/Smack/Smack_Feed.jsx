@@ -15,6 +15,7 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
     return null;
   }
   if (posts) {
+    // posts.reverse()
     names.push("nothing");
     for (let user in users) {
       names.push(users[user].name);
@@ -30,7 +31,7 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
 
   return (
     <div className='smack-container'>
-      <div className='feed'>{posts.reverse().map((post, index) => (
+      <div className='feed'>{posts.map((post, index) => (
         <div className='post-container'>
           <div className='post'>
             <div className='post-header'>{names[post.user]} said:</div>
