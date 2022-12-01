@@ -72,7 +72,7 @@ function Home({ users, comments, posts, setToggleApiCall }) {
           {/* </div> */}
         </span>
         <div className="home-talksmack-footer">
-                <button className="smack-modal-button" onClick={() => setShowModal(true)}>💥Click to Shmack💥</button>
+                <button className="smack-modal-button" onClick={modalFunc}>💥Click to Shmack💥</button>
         </div>
         <Talk_Smack show={showModal} close={() => setShowModal(false)} setToggleApiCall={setToggleApiCall} />
         <Smack_Feed users={users} comments={comments} posts={posts} />
