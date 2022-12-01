@@ -40,8 +40,10 @@
 }
 
 .reply-footer, .post-footer {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 2fr 1fr; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .reply-content, .post-content {
