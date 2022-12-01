@@ -44,7 +44,7 @@ function Login() {
   const handleSignInSubmit = async (e) => {
     e.preventDefault();
     await login(user)
-    // navigate("/home");
+    navigate("/home");
   }
 
   return (
