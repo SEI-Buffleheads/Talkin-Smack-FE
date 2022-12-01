@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { createUser } from "../../services/apiCalls";
 
-function Sign_Up({ setToken }) {
-  const [submit, setSubmit]= useState(false)
+function Sign_Up() {
+
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -20,24 +20,20 @@ function Sign_Up({ setToken }) {
       ...user,
       [e.target.id]: e.target.value
     })
-    console.log(user);
   };
-console.log(setToken)
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmit(!submit);
   };
 
-  useEffect(() => {
-    const callApi = async () => {
-      const response = await createUser(user);
-      console.log(response['token'])
-      setToken(response['token']);
-
-      //navigate to the users profile page here
-    };
-    callApi();
-  },[submit]);
+  // useEffect(() => {
+  //   const callApi = async () => {
+  //     const response = await createUser(user);
+  //     console.log(response['token'])
+  //     //navigate to the users profile page here
+  //   };
+  //   callApi();
+  // },[submit]);
 
   return (
     <div className="form-container">

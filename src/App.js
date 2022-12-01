@@ -15,7 +15,7 @@ function App() {
   const [commentsOnPost, setCommentsOnPost] = useState([]);
   const [users, setUsers] = useState([]);
   const [toggleApiCall, setToggleApiCall] = useState(false);
-  const [token, setToken] = useState(null);
+
 
   useEffect(() => {
     const callApi = async () => {
@@ -55,8 +55,8 @@ function App() {
             />
           }
         />
-        <Route path="/login" element={<Login setToken={setToken} />} />
-        <Route path="/signup" element={<Sign_Up setToken={setToken} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Sign_Up />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
