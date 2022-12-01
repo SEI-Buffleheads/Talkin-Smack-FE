@@ -34,11 +34,11 @@ function Home({ users, comments, posts, setToggleApiCall }) {
   return (
     <>
       <div className="home-container">
-        <Search setSearch={setSearch} />
+        {/* <Search setSearch={setSearch} /> */}
         <span className="home-talksmack-container">
           {/* <div className="home-talksmack-box"> */}
             {/* <h3 className="home-talksmack-title">Talk Smack</h3> */}
-            <form className="home-talksmack-content" onSubmit={handleSubmit}>
+            {/* <form className="home-talksmack-content" onSubmit={handleSubmit}>
               <textarea
                 className="home-talksmack-body"
                 placeholder="Smack talking starts here..."
@@ -53,9 +53,13 @@ function Home({ users, comments, posts, setToggleApiCall }) {
                   submit
                 </button>
               </div>
-            </form>
+            </form> */}
           {/* </div> */}
         </span>
+        <div className="home-talksmack-footer">
+                <button className="smack-modal-button" onClick={() => setShowModal(true)}>💥Click to Shmack💥</button>
+
+              </div>
         <Talk_Smack show={showModal} close={() => setShowModal(false)} />
         <Smack_Feed users={users} comments={comments} posts={posts} />
       </div>
