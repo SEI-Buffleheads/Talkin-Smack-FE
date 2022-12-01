@@ -83,3 +83,12 @@
 @media (max-width: 600px){
 
 }
+
+.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid #e7195a;
+  color: #e7195a;
+  border-radius: 4px;
+  margin: 20px 0;
+}

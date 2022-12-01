@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Link, Routes, Route } from "react-router-dom";
+import Search from '../Search/Search';
 import Smack_Feed from "../Smack/Smack_Feed.jsx";
 import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx";
 import Home_Footer from "./Footer/Home_Footer.jsx";
@@ -7,13 +7,14 @@ import { useEffect, useState } from "react";
 
 function Home({ users, comments, posts, setToggleApiCall }) {
   const [showModal, setShowModal] = useState(false);
+  const [search, setSearch] = useState('')
 
   setToggleApiCall((prev) => ![prev]);
 
   const [post, setPost] = useState({
     title: "User said: ",
     content: "",
-    author: 5, //i think this should be taken from useParams later when we have authorization
+    author: 5, //verify should send back an id 
   });
 
   const handleChange = (e) => {
@@ -33,7 +34,7 @@ function Home({ users, comments, posts, setToggleApiCall }) {
   return (
     <>
       <div className="home-container">
-        <h1>Hello Home</h1>
+        <Search setSearch={setSearch} />
         <span className="home-talksmack-container">
           <div className="home-talksmack-box">
             <h3 className="home-talksmack-title">Talk Smack</h3>
@@ -52,9 +53,9 @@ function Home({ users, comments, posts, setToggleApiCall }) {
                   submit
                 </button>
               </div>
-          </form>
+            </form>
           </div>
-          </span>
+        </span>
         <Talk_Smack show={showModal} close={() => setShowModal(false)} />
         <Smack_Feed users={users} comments={comments} posts={posts} />
       </div>
