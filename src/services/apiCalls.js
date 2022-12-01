@@ -58,8 +58,11 @@ export const createUser = async (userData) => {
 };
 
 export const loginUser = async (userData) => {
+  const axiosConfig = {
+    headers: { "Content-Type": "application/json" },
+  };
   try {
-    const response = await api.post("/login/", userData);
+    const response = await api.post("/login/", userData, axiosConfig);
     return response.data;
   } catch (error) {
     throw error;
