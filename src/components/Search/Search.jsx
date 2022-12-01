@@ -1,9 +1,13 @@
-import React from 'react'
-
-function Search() {
+function Search({ setSearch }) {
   return (
-    <div>Search</div>
-  )
+    <input
+      type="text"
+      placeholder="Search Smack Talk"
+      onChange={(event) => {
+        setSearch(event.target.value);
+      }}
+    />
+  );
 }
 
-export default Search
+export default Search;
