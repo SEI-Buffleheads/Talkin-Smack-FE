@@ -36,11 +36,14 @@
 
 .comments{
   transform: 50px;
+  margin-left: 50px;
 }
 
 .reply-footer, .post-footer {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 2fr 1fr; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .reply-content, .post-content {
@@ -62,9 +65,11 @@
 @media screen and (max-width: 700px) {
   .smack-container{
     height: 75vh;
-    margin: 0px 20px 120px 20px;
+    /* margin: 0px 20px 120px 20px; */
     display: inline-block;
   }
-
+  .comments {
+    all: unset;
+  }
 
 }

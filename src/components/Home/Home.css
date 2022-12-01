@@ -74,5 +74,9 @@
   .smack-modal-button{
     font-size: medium;
   }
+  .home-container{
+    margin: 0px;
+    width: 100%;
+  }
 }
 

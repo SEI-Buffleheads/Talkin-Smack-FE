@@ -29,23 +29,16 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
   };
 
   return (
-    <div className="smack-container">
-      <div className="feed">
-        {posts.reverse().map((post, index) => (
-          <div className="post-container" id={index}>
-            <div className="post">
-              <div className="post-header">{names[post.user]} said:</div>
-              <div className="post-content">{post.content}</div>
-              <div className="post-footer">
-                <Reply_Button
-                  comments={comments}
-                  post={post.id}
-                  key={index}
-                  setShow={setShowReplies}
-                />
-                <div></div>
-                <button onClick={modalFunc}>reply</button>
-              </div>
+    <div className='smack-container'>
+      <div className='feed'>{posts.reverse().map((post, index) => (
+        <div className='post-container'>
+          <div className='post'>
+            <div className='post-header'>{names[post.user]} said:</div>
+            <div className='post-content'>{post.content}</div>
+            <div className='post-footer'>
+              <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
+              <div></div>
+              <button>reply</button>
             </div>
             <Reply index={index} show={showReplyModal} close={() => setShowReplyModal(false)} setToggleApiCall={setToggleApiCall}/>
             <Smack_Comments
@@ -55,6 +48,7 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
               post={post.id}
               author={names[post.author]}
             />
+          </div>
           </div>
         ))}
       </div>
