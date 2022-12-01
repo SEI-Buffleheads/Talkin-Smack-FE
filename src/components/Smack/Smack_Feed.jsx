@@ -20,7 +20,7 @@ function Smack({ users, comments, posts }) {
 
   return (
     <div className='smack-container'>
-      <div className='feed'>{posts.map((post, index) => (
+      <div className='feed'>{posts.reverse().map((post, index) => (
         <div className='post-container'>
           <div className='post'>
             <div className='post-header'>{names[post.user]} said:</div>
