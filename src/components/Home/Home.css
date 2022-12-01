@@ -71,5 +71,8 @@
   .home-talksmack-container{
     align-items: center;
   }
+  .smack-modal-button{
+    font-size: medium;
+  }
 }
 
