@@ -10,6 +10,7 @@ export default function Reply_Button({ comments, post, setShow }) {
   }
 
   const handleClick = (e) => {
+    e.preventDefault()
     console.log(e)
     setShow((prev)=>!prev)
   }
