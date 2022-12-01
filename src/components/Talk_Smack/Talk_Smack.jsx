@@ -51,7 +51,7 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
             <div className="modal-footer">
               <button onClick={close}>close</button>
               <div></div>
-              <button className="submit" type="submit">submit</button>
+              <button className="submit">submit</button>
             </div>
           </div>
         </form>
