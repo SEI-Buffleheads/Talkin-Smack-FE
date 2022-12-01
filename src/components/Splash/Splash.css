@@ -38,6 +38,7 @@
 
 .splash-logo{
   width: 300px;
+  animation: titleSlide 1s;
 }
 
 @keyframes titleSlide{
