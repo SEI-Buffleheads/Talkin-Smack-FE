@@ -2,9 +2,10 @@ import "./Sign_Up.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { createUser } from "../../services/apiCalls";
+import { useSignup } from "../../hooks/useSignup";
 
 function Sign_Up() {
-
+  const { signup, error, isLoading } = useSignup();
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -18,22 +19,14 @@ function Sign_Up() {
     e.preventDefault();
     setUser({
       ...user,
-      [e.target.id]: e.target.value
-    })
+      [e.target.id]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    await signup(user);
   };
-
-  // useEffect(() => {
-  //   const callApi = async () => {
-  //     const response = await createUser(user);
-  //     console.log(response['token'])
-  //     //navigate to the users profile page here
-  //   };
-  //   callApi();
-  // },[submit]);
 
   return (
     <div className="form-container">
@@ -68,7 +61,10 @@ function Sign_Up() {
               onChange={handleChange}
               id="re_password"
             />
-            <input type="submit" value="Submit" />
+            <div className="form-bottom">
+              <input type="submit" value="Submit" disabled={isLoading} />
+              {error && <div className="error">{error}</div>}
+            </div>
           </form>
         </div>
       </div>

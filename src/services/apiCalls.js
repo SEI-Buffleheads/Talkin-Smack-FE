@@ -46,8 +46,11 @@ export const getUser = async (id) => {
 };
 
 export const createUser = async (userData) => {
+   const axiosConfig = {
+    headers: {'Content-Type': 'application/json'}
+  }
   try {
-    const response = await api.post("/signup", userData);
+    const response = await api.post("/signup", userData, axiosConfig);
     return response.data;
   } catch (error) {
     throw error;

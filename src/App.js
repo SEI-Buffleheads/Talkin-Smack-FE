@@ -33,12 +33,6 @@ function App() {
     callApi();
   }, [toggleApiCall]);
 
-  setTimeout(() => {
-    if (!token) {
-      return <Login setToken={setToken} /> 
-    }
-  }, 45000);
-
   return (
     <>
       <Navbar />
