@@ -27,7 +27,7 @@ function Smack({ users, comments, posts }) {
             <div className='post-content'>{post.content}</div>
             <div className='post-footer'>
               <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
-              <div></div>
+              {/* <div></div> */}
               <button>reply</button>
             </div>
           </div>
