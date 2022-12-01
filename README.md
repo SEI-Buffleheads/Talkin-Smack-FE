@@ -1,6 +1,6 @@
 # Talkin' Smack
 
-[Netlify Link]()
+[Netlify Link](https://genuine-marshmallow-56fd7d.netlify.app/)
 
 [Link to Back-End Repo](https://github.com/SEI-Buffleheads/talkin-smack-be)
 
