@@ -56,7 +56,7 @@ function Home({ users, comments, posts, setToggleApiCall }) {
             </form>
           {/* </div> */}
         </span>
-        <Talk_Smack show={showModal} close={() => setShowModal(false)} />
+        <Talk_Smack show={showModal} setToggleApiCall={setToggleApiCall} close={() => setShowModal(false)} />
         <Smack_Feed users={users} comments={comments} posts={posts} />
       </div>
       <Home_Footer />
