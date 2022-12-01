@@ -7,10 +7,10 @@ import logo from "../Home/Footer/img/logo.png";
 import {useLogout} from '../../hooks/useLogout'
 
 function Navbar() {
-  const { logout } = useLogout()
+  const { log_out } = useLogout()
   
   const handleClick = () => {
-    logout()
+    log_out()
   }
   return (
     <>
