@@ -4,6 +4,7 @@ import feed from "../img/feed-vector.svg";
 import profile from "../img/profile-vector.svg";
 import logout from "../img/logout.svg";
 import logo from "../Home/Footer/img/logo.png";
+import search from "../img/search-vector.svg"
 import { useLogout } from '../../hooks/useLogout'
 import {useAuthContext} from '../../hooks/useAuthContext'
 
@@ -28,6 +29,7 @@ function Navbar() {
           {user && (<Link to="/">
             <img onClick={handleClick} className="nav-img" src={logout} />
           </Link>)}
+          <img className="nav-img" src={search} />
           <img className="nav-logo" src={logo} />
         </div>
       </nav>
