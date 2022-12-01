@@ -4,8 +4,17 @@ import feed from "../img/feed-vector.svg";
 import profile from "../img/profile-vector.svg";
 import logout from "../img/logout.svg";
 import logo from "../Home/Footer/img/logo.png";
+import { useLogout } from '../../hooks/useLogout'
+import {useAuthContext} from '../../hooks/useAuthContext'
 
 function Navbar() {
+  const { log_out } = useLogout()
+  const {user} = useAuthContext()
+  
+  const handleClick = () => {
+    log_out()
+  }
+  console.log(user)
   return (
     <>
       <nav>
@@ -16,9 +25,9 @@ function Navbar() {
           <Link to="/home">
             <img className="nav-img" src={feed} />
           </Link>
-          <Link to="/">
-            <img className="nav-img" src={logout} />
-          </Link>
+          {user && (<Link to="/">
+            <img onClick={handleClick} className="nav-img" src={logout} />
+          </Link>)}
           <img className="nav-logo" src={logo} />
         </div>
       </nav>
