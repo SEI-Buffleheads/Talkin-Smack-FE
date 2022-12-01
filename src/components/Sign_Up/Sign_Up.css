@@ -7,6 +7,7 @@
 
 .form-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -40,6 +41,7 @@ input[type="text"], input[type="password"] {
 
 input[type=submit]
 {
+  
   background-color: white;
   border: 4px solid black;
   box-shadow: 4px 4px black;
@@ -47,7 +49,7 @@ input[type=submit]
   margin-top: 5px;
   font-weight: bold;
   font-size: 20px;
-  float: right;
+  /* float: right; */
   cursor: pointer;
 }
 
@@ -70,7 +72,6 @@ input[type=text],
   margin: 20px 0;
 }
 
-.form-bottom{
-  display: flex;
-  flex-direction: column;
+.signup-input{
+  width: 75%;
 }
