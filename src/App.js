@@ -25,6 +25,7 @@ function App() {
       setComments(res);
       const res2 = await getPosts();
       setPosts(res2);
+      console.log('api called')
       // const res3 = await getCommentsOnPost();
       // setCommentsOnPost(res3); 
       // console.log(res3)
