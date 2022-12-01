@@ -16,7 +16,7 @@ function Navbar() {
   const handleClick = () => {
     log_out()
   }
-  console.log(user)
+  
   return (
     <>
       <nav>

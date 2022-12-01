@@ -1,28 +1,35 @@
 import "./Talk_Smack.css";
 import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
-import { createPost } from "../../services/apiCalls";
+import { createPost, verifyUser } from "../../services/apiCalls";
 import * as ReactDOM  from "react-dom";
+import { useAuthContext } from "../../hooks/useAuthContext.js"
 
 function Talk_Smack({ show, close, setToggleApiCall }) {
+  const { user } = useAuthContext()
   const [post, setPost] = useState({
-    title: "User said: ",
-    content: "",
-    author: 5, //i think this should be taken from useParams later when we have authorization
+    content: ""
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setPost((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    const { value } = e.target;
+    setPost({
+      content: value,
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // await createPost(post);
+    if(!user){
+      alert("Please log in to post")
+      close()
+      return
+    }
+    // console.log(post,user)
+    const profile = await verifyUser(user.token)
+    console.log(await createPost(post,user.token));
     setToggleApiCall((prev) => !prev);
+    close()
   };
 
   return ReactDOM.createPortal(

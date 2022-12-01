@@ -26,6 +26,7 @@ function Sign_Up() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await signup(user);
+    navigate("/profile");
   };
 
   return (

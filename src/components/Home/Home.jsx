@@ -4,10 +4,12 @@ import Smack_Feed from "../Smack/Smack_Feed.jsx";
 import Talk_Smack from "../Talk_Smack/Talk_Smack.jsx";
 import Home_Footer from "./Footer/Home_Footer.jsx";
 import { useEffect, useState } from "react";
+import {useAuthContext} from '../../hooks/useAuthContext'
 
 function Home({ users, comments, posts, setToggleApiCall }) {
   const [showModal, setShowModal] = useState(false);
   const [search, setSearch] = useState('')
+  const {user} = useAuthContext()
 
   setToggleApiCall((prev) => ![prev]);
 
@@ -28,8 +30,14 @@ function Home({ users, comments, posts, setToggleApiCall }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // await createPost(post);
-    // setToggleApiCall((prev) => !prev);
+    setToggleApiCall((prev) => !prev);
   };
+
+//   if (!user) {
+//   setTimeout(() => {
+//     setShowModal(true)
+//   }, 1000);
+// }
 
   return (
     <>
@@ -58,9 +66,8 @@ function Home({ users, comments, posts, setToggleApiCall }) {
         </span>
         <div className="home-talksmack-footer">
                 <button className="smack-modal-button" onClick={() => setShowModal(true)}>💥Click to Shmack💥</button>
-
-              </div>
-        <Talk_Smack show={showModal} close={() => setShowModal(false)} />
+        </div>
+        <Talk_Smack show={showModal} close={() => setShowModal(false)} setToggleApiCall={setToggleApiCall} />
         <Smack_Feed users={users} comments={comments} posts={posts} />
       </div>
       <Home_Footer />
