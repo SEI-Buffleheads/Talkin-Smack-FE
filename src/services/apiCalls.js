@@ -125,3 +125,16 @@ export const deleteUser = async (id) => {
   } 
 };
 
+// const userInfo = {
+//   username: "Ottavia",
+//   password: "12345"
+// }
+
+// const comment = {
+//   content: "Hello world"
+// }
+
+// const token = await loginUser(userInfo)
+
+// console.log(await createComment(188, comment, token.token))
+
