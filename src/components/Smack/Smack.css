@@ -4,7 +4,7 @@
   box-shadow: 4px 4px black;
   border-radius: 12px;
   background-color:rgba(255,255,255,0.3);
-  min-width: 500px;
+  min-width: 400px;
   height: 75vh;
   overflow: scroll;
   /* display: inline-block; */
