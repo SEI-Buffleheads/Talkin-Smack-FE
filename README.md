@@ -28,15 +28,16 @@ A social media site so you can talk smack with your friends (or frenemies). On t
 
 ## Component Hierarchy
 
-![Flow Chart](./img/flowchart.png)
+<img src='./img/flowchart.png' width='700'>
 
 ---
 
 ## Wireframes & Branding
 
-![Desktop Wireframe](./img/wireframe-desktop.png)
-![Mobile Wireframe](./img/wireframe-mobile2.png)
-![Mobile Wireframe](./img/wireframe-mobile.png)
+<img src='./img/wireframe-desktop.png' width='400'>
+<br>
+<img src='./img/wireframe-mobile2.png' height='400'>
+<img src='./img/wireframe-mobile.png' height='400'>
 
 ---
 
@@ -46,9 +47,9 @@ A social media site so you can talk smack with your friends (or frenemies). On t
 
 ## Content Management
 
-![Flow Chart](./img/gitproj.png)
 [GitHub Projects](https://github.com/orgs/SEI-Buffleheads/projects/3/views/1?layout=table)
 
+<img src='./img/gitproj.png' width='600'>
 ---
 
 ## MVP GOALS
