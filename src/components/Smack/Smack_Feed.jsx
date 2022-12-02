@@ -8,7 +8,8 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 function Smack({ users, comments, posts, setToggleApiCall }) {
   const [showReplies, setShowReplies] = useState(true);
   const [showReplyModal, setShowReplyModal] = useState(false)
-  const {user} = useAuthContext()
+  const { user } = useAuthContext()
+  const [postId , setPostId] = useState("")
   let names = [];
 
   if (!posts) {
@@ -22,14 +23,15 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
     }
   }
 
-  const modalFunc = () => {
+  const modalFunc = (id) => {
     if (!user) {
       return alert("you must sign in to talk schmack");
     }
     setShowReplyModal(true);
+    setPostId(id)
   };
 
-  console.log(comments)
+  console.log(posts)
   return (
     <div className='smack-container'>
       <div className='feed'>{posts.map((post, index) => {
@@ -45,10 +47,9 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
             <div className='post-content'>{post.content}</div>
             <div className='post-footer'>
               <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
-              <div></div>
-              <button>reply</button>
-            </div>
-            <Reply index={index} show={showReplyModal} close={() => setShowReplyModal(false)} setToggleApiCall={setToggleApiCall}/>
+                <button onClick={() => modalFunc(post.id)}>reply</button>
+              </div>
+            <Reply postId={postId} show={showReplyModal} close={() => setShowReplyModal(false)} setToggleApiCall={setToggleApiCall}/>
             <Smack_Comments
               show={showReplies}
               users={users}

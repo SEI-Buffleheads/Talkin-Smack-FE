@@ -5,23 +5,23 @@ import { createComment, verifyUser } from "../../services/apiCalls";
 import * as ReactDOM from "react-dom";
 import { useAuthContext } from "../../hooks/useAuthContext.js";
 
-function Reply({ index, show, close, setToggleApiCall }) {
+function Reply({ postId, show, close, setToggleApiCall }) {
   const { user } = useAuthContext();
-  const [post, setPost] = useState({
+  const [comment, setComment] = useState({
     content: "",
   });
 
   const handleChange = (e) => {
     const { value } = e.target;
-    setPost({
+    setComment({
       content: value,
     });
   };
-  let id = index + 1
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createComment(id, post, user.token);
+    
+    await createComment(postId, comment, user.token);
     setToggleApiCall((prev) => !prev);
     close();
   };
@@ -39,7 +39,7 @@ function Reply({ index, show, close, setToggleApiCall }) {
               placeholder="Smack talking starts here..."
               name="content"
               maxlength="155"
-              value={post.content}
+              value={comment.content}
               onChange={handleChange}
             />
             <div className="modal-footer">
