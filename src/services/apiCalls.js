@@ -116,9 +116,11 @@ export const updateUser = async (id, userData, token) => {
   }
 };
 
-export const deleteUser = async (id) => {
+export const deleteUser = async (id, token) => {
   try {
-    const response = await api.delete(`/profiles/${id}`);
+    const response = await api.delete(`/profiles/${id}`, {
+      headers: {"Authorization":`Token ${token}`}
+    });
     return response.data;
   } catch (error) {
     throw error;
