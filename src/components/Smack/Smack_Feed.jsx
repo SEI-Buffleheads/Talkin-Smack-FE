@@ -31,10 +31,15 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
 
   return (
     <div className='smack-container'>
-      <div className='feed'>{posts.map((post, index) => (
-        <div className='post-container'>
+      <div className='feed'>{posts.map((post, index) => {
+        const username = users.filter(user => {
+          if (user.id === post.user){ 
+            return user.name[0]
+          }}) 
+        return (
+        <div className='post-container' key={index}>
           <div className='post'>
-            <div className='post-header'>{names[post.user]} said:</div>
+            <div className='post-header'>{username[0].name} said:</div>
             <div className='post-content'>{post.content}</div>
             <div className='post-footer'>
               <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
@@ -51,7 +56,7 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
             />
           </div>
           </div>
-        ))}
+        )})}
       </div>
     </div>
   );
