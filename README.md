@@ -6,58 +6,11 @@
 
 [Link to Railway](https://talking-smack-2be-production.up.railway.app/)
 
-## Placeholders
-
----
-
-1. Overview
-2. Link to API/Backend Repo
-3. Meet the Team
-4. Wireframing
-5. Whimsical tools
-6. Schemas
-7. Link to PM Board
-8. Explanation of App
-9. Screenshots of App
-10. CRUD breakdown
-11. Tools, tech, and skills used
-
-
-[Github Repo](https://github.com/SEI-Buffleheads/talkin-smack-fe)
-
-**Railway:**
-
-**Netlify:**
-
 ## Overview
 
 ### Brand Statement
 
-A social media site so you can talk smack with your friends. 
-
-### Talkin' Smack Outline
-
-- #### Home Page
-
-On the Talkin' Smack landing page, there is an area at the top to make a post. Below that is the users feed, showing posts from friends. The posts can be replied to.
-
-- #### Navigation Bar
-
-
-
-- #### Footer
-
-
-
-- #### Profile Page
-
-
-
-- #### Login Page
-
-
-
-- #### Sign Up Page
+A social media site so you can talk smack with your friends (or frenemies). On the Talkin' Smack landing page, You are prompted to sign in or sign up. Once on the home screen, there is an area at the top of the page to make a post. Below that is the users feed, showing posts from friends. 
 
 ## Team Members
 
@@ -81,7 +34,9 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 
 ## Wireframes & Branding
 
-[Wireframe]()
+![Desktop Wireframe](./img/wireframe-desktop.png)
+![Mobile Wireframe](./img/wireframe-mobile2.png)
+![Mobile Wireframe](./img/wireframe-mobile.png)
 
 ---
 
