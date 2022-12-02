@@ -5,7 +5,7 @@ import { createComment, verifyUser } from "../../services/apiCalls";
 import * as ReactDOM from "react-dom";
 import { useAuthContext } from "../../hooks/useAuthContext.js";
 
-function Reply({ postId, show, close, setToggleApiCall }) {
+function Reply({ postId, show, close, setToggleApiCall, setShowReplies }) {
   const { user } = useAuthContext();
   const [comment, setComment] = useState({
     content: "",
@@ -22,17 +22,12 @@ function Reply({ postId, show, close, setToggleApiCall }) {
     e.preventDefault();
     if (e.nativeEvent.submitter.id === "sub"){
       await createComment(postId, comment, user.token);
+      setShowReplies(true)
       setToggleApiCall((prev) => !prev);
     }
     setComment({ content: "" })
     close()
   };
-  //   e.preventDefault();
-  //   
-  //   await createComment(postId, comment, user.token);
-  //   setToggleApiCall((prev) => !prev);
-  //   close();
-  // };
 
   return ReactDOM.createPortal(
     <CSSTransition in={show} unmountOnExit timeout={{ enter: 0, exit: 300 }}>

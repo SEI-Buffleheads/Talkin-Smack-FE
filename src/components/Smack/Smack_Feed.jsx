@@ -6,7 +6,7 @@ import Reply from "./Reply";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 function Smack({ users, comments, posts, setToggleApiCall }) {
-  const [showReplies, setShowReplies] = useState(true);
+  const [showReplies, setShowReplies] = useState(false);
   const [showReplyModal, setShowReplyModal] = useState(false)
   const { user } = useAuthContext()
   const [postId , setPostId] = useState("")
@@ -49,7 +49,7 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
               <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
                 <button onClick={() => modalFunc(post.id)}>reply</button>
               </div>
-            <Reply postId={postId} show={showReplyModal} close={() => setShowReplyModal(false)} setToggleApiCall={setToggleApiCall}/>
+            <Reply postId={postId} show={showReplyModal} setShowReplies={setShowReplies} close={() => setShowReplyModal(false)} setToggleApiCall={setToggleApiCall}/>
             <Smack_Comments
               show={showReplies}
               users={users}
