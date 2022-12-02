@@ -18,17 +18,14 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
     });
   };
 
-  const closeItDown = () => {
-    setPost({ content: "" })
-    close()
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(post,user)
-    await createPost(post,user.token);
-    setToggleApiCall((prev) => !prev);
-    setPost({content: ""})
+    if (e.nativeEvent.submitter.id === "sub"){
+      await createPost(post,user.token);
+      setToggleApiCall((prev) => !prev);
+    }
+    setPost({ content: "" })
     close()
   };
 
@@ -49,9 +46,9 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
               onChange={handleChange}
             />
             <div className="modal-footer">
-              <button onClick={closeItDown}>close</button>
+              <button id="close">close</button>
               <div></div>
-              <button className="submit">submit</button>
+              <button className="submit" id="sub">submit</button>
             </div>
           </div>
         </form>

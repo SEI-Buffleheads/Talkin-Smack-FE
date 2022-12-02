@@ -24,12 +24,8 @@ function App() {
       const res = await getComments();
       setComments(res);
       const res2 = await getPosts();
-      setPosts(res2);
+      setPosts(res2.reverse());
       console.log('api called')
-      // const res3 = await getCommentsOnPost();
-      // setCommentsOnPost(res3); 
-      // console.log(res3)
-      //take this and use to attach comments to posts
     };
     callApi();
   }, [toggleApiCall]);

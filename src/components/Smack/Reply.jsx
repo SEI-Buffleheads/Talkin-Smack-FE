@@ -5,26 +5,34 @@ import { createComment, verifyUser } from "../../services/apiCalls";
 import * as ReactDOM from "react-dom";
 import { useAuthContext } from "../../hooks/useAuthContext.js";
 
-function Reply({ index, show, close, setToggleApiCall }) {
+function Reply({ postId, show, close, setToggleApiCall }) {
   const { user } = useAuthContext();
-  const [post, setPost] = useState({
+  const [comment, setComment] = useState({
     content: "",
   });
 
   const handleChange = (e) => {
     const { value } = e.target;
-    setPost({
+    setComment({
       content: value,
     });
   };
-  let id = index + 1
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createComment(id, post, user.token);
-    setToggleApiCall((prev) => !prev);
-    close();
+    if (e.nativeEvent.submitter.id === "sub"){
+      await createComment(postId, comment, user.token);
+      setToggleApiCall((prev) => !prev);
+    }
+    setComment({ content: "" })
+    close()
   };
+  //   e.preventDefault();
+  //   
+  //   await createComment(postId, comment, user.token);
+  //   setToggleApiCall((prev) => !prev);
+  //   close();
+  // };
 
   return ReactDOM.createPortal(
     <CSSTransition in={show} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
@@ -39,13 +47,13 @@ function Reply({ index, show, close, setToggleApiCall }) {
               placeholder="Smack talking starts here..."
               name="content"
               maxlength="155"
-              value={post.content}
+              value={comment.content}
               onChange={handleChange}
             />
             <div className="modal-footer">
-              <button onClick={close}>close</button>
+              <button onClick={close} id="close">close</button>
               <div></div>
-              <button className="submit" type="submit">
+              <button className="submit" type="submit" id="sub">
                 submit
               </button>
             </div>

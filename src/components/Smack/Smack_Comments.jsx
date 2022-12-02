@@ -1,10 +1,10 @@
 import './Smack.css'
 import React from 'react'
-import * as ReactDOM from "react-dom";
-import { CSSTransition } from "react-transition-group";
-import Reply_Button from './Reply_Button';
+// import * as ReactDOM from "react-dom";
+// import { CSSTransition } from "react-transition-group";
+// import Reply_Button from './Reply_Button';
 
-export default function Smack_Comments({ names, comments, post, author, show }) {
+export default function Smack_Comments({ users, comments, post, author, show }) {
   if (!show) return null
   
   let replies = []
@@ -16,19 +16,28 @@ export default function Smack_Comments({ names, comments, post, author, show }) 
   
   return (
     <div className="comments">
-      {replies.map((reply) => (
+      {comments.map((comment) => {
+        if (post !== comment.post){
+          return
+        }
+        const commentUser = users.filter(user => {
+          if (user.id === comment.user){ 
+            return user.name[0]
+          }}) 
+        const userName = commentUser[0].name
+        return(
         <div className="reply">
           <div className="reply-header">
-            {names[reply.author]} responded to {author}:
+              {userName} replied:
           </div>
-          <div className="reply-content">{reply.body}</div>
+          <div className="reply-content">{comment.content}</div>
           <div className="reply-footer">
             <div></div>
             <div></div>
-            <button>reply</button>
+            {/* <button>reply</button> */}
           </div>
         </div>
-      ))}
+      )})}
     </div>
   );
 }

@@ -6,58 +6,11 @@
 
 [Link to Railway](https://talking-smack-2be-production.up.railway.app/)
 
-## Placeholders
-
----
-
-1. Overview
-2. Link to API/Backend Repo
-3. Meet the Team
-4. Wireframing
-5. Whimsical tools
-6. Schemas
-7. Link to PM Board
-8. Explanation of App
-9. Screenshots of App
-10. CRUD breakdown
-11. Tools, tech, and skills used
-
-
-[Github Repo](https://github.com/SEI-Buffleheads/talkin-smack-fe)
-
-**Railway:**
-
-**Netlify:**
-
 ## Overview
 
 ### Brand Statement
 
-A social media site so you can talk smack with your friends. 
-
-### Talkin' Smack Outline
-
-- #### Home Page
-
-On the Talkin' Smack landing page, there is an area at the top to make a post. Below that is the users feed, showing posts from friends. The posts can be replied to.
-
-- #### Navigation Bar
-
-
-
-- #### Footer
-
-
-
-- #### Profile Page
-
-
-
-- #### Login Page
-
-
-
-- #### Sign Up Page
+A social media site so you can talk smack with your friends (or frenemies). On the Talkin' Smack landing page, You are prompted to sign in or sign up. Once on the home screen, there is an area at the top of the page to make a post. Below that is the users feed, showing posts from friends. 
 
 ## Team Members
 
@@ -75,13 +28,16 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 
 ## Component Hierarchy
 
-![Flow Chart](./img/flowchart.png)
+<img src='./img/flowchart.png' width='700'>
 
 ---
 
 ## Wireframes & Branding
 
-[Wireframe]()
+<img src='./img/wireframe-desktop.png' width='400'>
+<br>
+<img src='./img/wireframe-mobile2.png' height='400'>
+<img src='./img/wireframe-mobile.png' height='400'>
 
 ---
 
@@ -91,9 +47,9 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 
 ## Content Management
 
-- github pages screenshot
 [GitHub Projects](https://github.com/orgs/SEI-Buffleheads/projects/3/views/1?layout=table)
 
+<img src='./img/gitproj.png' width='600'>
 ---
 
 ## MVP GOALS
@@ -114,15 +70,17 @@ On the Talkin' Smack landing page, there is an area at the top to make a post. B
 
 - Smack and SmackDown buttons
 - For You Page
+- User Image
+- Search functionality
 
 ## Project Schedule
 
 | Date      | Deliverable                                                |   Status   |
 | :-------- | :--------------------------------------------------------- | :--------: |
 | Nov 21     | Wireframes + Final Project Approval                       |  Complete  |
-| Nov 22     | Basic Front End, Back End Deployment                       | Incomplete |
-| Nov 28     |                        | Incomplete |
-| Nov 29     | Continue Back-End + Testing + Develop Front-End Components | Incomplete |
-| Nov 30     | React Front-End MVP + CSS Styling                          | Incomplete |
-| Dec 1      | Refine CSS and proceed with Post-MVP Improvements          | Incomplete |
+| Nov 22     | Basic Front End, Back End Deployment                       | Complete |
+| Nov 28     | Continue Back-End + Testing + Develop Front-End Components | Complete |
+| Nov 29     | Continue Back-End + Testing + Develop Front-End Components | Complete |
+| Nov 30     | React Front-End MVP + CSS Styling                          | Complete |
+| Dec 1      | Refine CSS and proceed with Post-MVP Improvements          | Complete |
 | Dec 2      | Present and Celebrate                                      | Incomplete |
