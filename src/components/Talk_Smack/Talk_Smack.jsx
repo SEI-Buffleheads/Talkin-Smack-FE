@@ -18,7 +18,6 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
     });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (e.nativeEvent.submitter.id === "sub"){
