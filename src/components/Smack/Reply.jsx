@@ -20,11 +20,19 @@ function Reply({ postId, show, close, setToggleApiCall }) {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    await createComment(postId, comment, user.token);
-    setToggleApiCall((prev) => !prev);
-    close();
+    if (e.nativeEvent.submitter.id === "sub"){
+      await createComment(postId, comment, user.token);
+      setToggleApiCall((prev) => !prev);
+    }
+    setComment({ content: "" })
+    close()
   };
+  //   e.preventDefault();
+  //   
+  //   await createComment(postId, comment, user.token);
+  //   setToggleApiCall((prev) => !prev);
+  //   close();
+  // };
 
   return ReactDOM.createPortal(
     <CSSTransition in={show} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
@@ -43,9 +51,9 @@ function Reply({ postId, show, close, setToggleApiCall }) {
               onChange={handleChange}
             />
             <div className="modal-footer">
-              <button onClick={close}>close</button>
+              <button onClick={close} id="close">close</button>
               <div></div>
-              <button className="submit" type="submit">
+              <button className="submit" type="submit" id="sub">
                 submit
               </button>
             </div>
