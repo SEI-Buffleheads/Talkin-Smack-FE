@@ -18,21 +18,15 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
     });
   };
 
-  const closeItDown = () => {
-    setPost({ content: "" })
-    close()
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (e.nativeEvent.submitter.id === "close") {
-      close()
-    } else if (e.nativeEvent.submitter.id === "sub"){
+    if (e.nativeEvent.submitter.id === "sub"){
       await createPost(post,user.token);
       setToggleApiCall((prev) => !prev);
-      setPost({content: ""})
-      close()
     }
+    setPost({ content: "" })
+    close()
   };
 
   return ReactDOM.createPortal(
@@ -52,7 +46,7 @@ function Talk_Smack({ show, close, setToggleApiCall }) {
               onChange={handleChange}
             />
             <div className="modal-footer">
-              <button onClick={closeItDown} id="close">close</button>
+              <button id="close">close</button>
               <div></div>
               <button className="submit" id="sub">submit</button>
             </div>
