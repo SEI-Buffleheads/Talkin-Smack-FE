@@ -40,12 +40,6 @@ function Home({ users, comments, posts, setToggleApiCall }) {
     setShowModal(true)
   }
 
-//   if (!user) {
-//   setTimeout(() => {
-//     setShowModal(true)
-//   }, 1000);
-// }
-
   return (
     <>
       <div className="home-container">

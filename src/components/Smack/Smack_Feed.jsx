@@ -6,7 +6,7 @@ import Reply from "./Reply";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 function Smack({ users, comments, posts, setToggleApiCall }) {
-  const [showReplies, setShowReplies] = useState(false);
+  const [showReplies, setShowReplies] = useState(true);
   const [showReplyModal, setShowReplyModal] = useState(false)
   const {user} = useAuthContext()
   let names = [];
@@ -29,17 +29,19 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
     setShowReplyModal(true);
   };
 
+  console.log(comments)
   return (
     <div className='smack-container'>
       <div className='feed'>{posts.map((post, index) => {
-        const username = users.filter(user => {
+        const postUser = users.filter(user => {
           if (user.id === post.user){ 
             return user.name[0]
           }}) 
+        const userName = postUser[0].name
         return (
         <div className='post-container' key={index}>
           <div className='post'>
-            <div className='post-header'>{username[0].name} said:</div>
+            <div className='post-header'>{userName} said:</div>
             <div className='post-content'>{post.content}</div>
             <div className='post-footer'>
               <Reply_Button comments={comments} post={post.id} key={index} setShow={setShowReplies} />
@@ -49,10 +51,10 @@ function Smack({ users, comments, posts, setToggleApiCall }) {
             <Reply index={index} show={showReplyModal} close={() => setShowReplyModal(false)} setToggleApiCall={setToggleApiCall}/>
             <Smack_Comments
               show={showReplies}
-              names={names}
+              users={users}
               comments={comments}
               post={post.id}
-              author={names[post.author]}
+              author={userName}
             />
           </div>
           </div>
